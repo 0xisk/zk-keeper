@@ -95,6 +95,8 @@
         "@dimensiondev/metamask-extension-provider": "https://github.com/DimensionDev/extension-provider/tarball/master",
         "@interep/identity": "^0.1.1",
         "@types/classnames": "^2.2.11",
+        "@web3modal/ethereum": "^2.0.0-alpha.4",
+        "@web3modal/react": "^2.0.0-alpha.4",
         "@zk-kit/identity": "^1.4.1",
         "@zk-kit/protocols": "^1.8.2",
         "axios": "^0.24.0",
