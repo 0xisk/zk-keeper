@@ -1,30 +1,14 @@
 {
+  "extends": "@cryptkeeper/config/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "rootDir": ".",
+    "preserveValueImports": false,
     "paths": {
-      "@src/*": ["src/*"]
-    },
-    "typeRoots": ["./node_modules/@types", "./e2e/@types", "./src/custom.d.ts"],
-    "target": "ES2020",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "outDir": "dist/js",
-    "strict": true,
-    "sourceMap": true,
-    "jsx": "react-jsx",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "lib": ["es2020", "dom", "webworker"],
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "noImplicitAny": true,
-    "strictPropertyInitialization": true
+      "@cryptkeeper/config": [
+        "./packages/config/src"
+      ]
+    }
   },
-  "include": ["src", "e2e"],
-  "exclude": ["node_modules", "coverage", "dist"]
+  "include": [
+    "./packages/"
+  ]
 }
