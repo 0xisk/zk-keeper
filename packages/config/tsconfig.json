@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-         "typeRoots": [
+        "typeRoots": [
             "./node_modules/@types",
             "./e2e/@types",
             "./src/custom.d.ts"
@@ -27,5 +27,5 @@
         "resolveJsonModule": true,
         "noImplicitAny": true,
         "strictPropertyInitialization": true
-    },
+    }
 }

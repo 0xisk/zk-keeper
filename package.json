@@ -120,6 +120,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@cryptkeeper/config": "workspace:^",
     "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-common-types": "^6.4.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",

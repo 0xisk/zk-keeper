@@ -1,11 +1,11 @@
 import { MerkleProof } from "@zk-kit/incremental-merkle-tree";
 import log from "loglevel";
 
-import EventEmitter from "@src/background/services/event";
-import { ZkIdentitySemaphore } from "@src/background/services/zkIdentity/protocols/ZkIdentitySemaphore";
-import ZkProofService from "@src/background/services/zkProof";
+import { EventEmitter } from "@cryptkeeper/services";
+import { ZkIdentitySemaphore } from "packages/extension/src/background/services/zkIdentity/protocols/ZkIdentitySemaphore";
+import ZkProofService from "packages/extension/src/background/services/zkProof";
 // TODO: convert to seperate service pacakges @cryptkeeper/services TBD
-import { RPCAction } from "@src/constants";
+import { RPCAction } from "packages/extension/src/constants";
 import {
   Approvals,
   IRlnGenerateArgs,
@@ -16,7 +16,7 @@ import {
   RLNFullProof,
   SelectedIdentity,
   SemaphoreProof,
-} from "@src/types";
+} from "packages/extension/src/types";
 
 const promises: {
   [k: string]: {

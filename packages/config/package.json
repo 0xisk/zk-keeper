@@ -1,4 +1,11 @@
 {
   "name": "@cryptkeeper/config",
-  "version": "0.1.0"
+  "private": true,
+  "version": "0.1.0",
+  "dependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "html-webpack-plugin": "^5.5.1",
+    "path": "^0.12.7",
+    "webpack": "^5.82.1"
+  }
 }

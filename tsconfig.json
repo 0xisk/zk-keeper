@@ -1,14 +1,14 @@
 {
   "extends": "@cryptkeeper/config/tsconfig.json",
   "compilerOptions": {
-    "preserveValueImports": false,
+    "baseUrl": ".",
+    "rootDir": ".",
     "paths": {
-      "@cryptkeeper/config": [
-        "./packages/config/src"
-      ]
+      "@cryptkeeper/providers": ["./packages/providers/src"],
+      "@cryptkeeper/services": ["./packages/services/src"],
+      "@src/*": ["packages/extension/src/*"]
     }
   },
-  "include": [
-    "./packages/"
-  ]
+  "include": ["packages/extension/src", "e2e", "packages"],
+  "exclude": ["node_modules", "coverage", "dist"]
 }
