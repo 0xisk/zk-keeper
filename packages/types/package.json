@@ -1,0 +1,26 @@
+{
+  "name": "@cryptkeeper/types",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "scripts": {
+    "build:ts": "rm -rf dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@semaphore-protocol/proof": "^3.10.1",
+    "@zk-kit/incremental-merkle-tree": "^1.1.0"
+  }
+}
