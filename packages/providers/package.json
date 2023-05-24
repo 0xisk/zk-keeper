@@ -2,11 +2,21 @@
   "name": "@cryptkeeper/providers",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "rm -rf dist && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@cryptkeeper/extension": "workspace:^",
+    "@cryptkeeper/services": "workspace:^1.0.0",
+    "@zk-kit/incremental-merkle-tree": "^1.1.0"
+  }
 }

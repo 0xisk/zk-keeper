@@ -1,10 +1,16 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "rootDir": "./src",
+        "rootDir": "./src/",
         "outDir": "./dist/src/"
     },
     "include": [
         "src"
     ],
+    "references": [
+        { "path": "../config" },
+        { "path": "../connectors" },
+        { "path": "../constants" },
+        { "path": "../react" }
+    ]
 }

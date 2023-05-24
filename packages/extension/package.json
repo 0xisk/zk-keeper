@@ -1,5 +1,6 @@
 {
   "name": "@cryptkeeper/extension",
+  "private": "true",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,5 +9,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@cryptkeeper/config": "workspace:^1.0.0",
+    "@cryptkeeper/constants": "workspace:^1.0.0",
+    "@cryptkeeper/controllers": "workspace:^1.0.0",
+    "@cryptkeeper/react": "workspace:^1.0.0",
+    "@cryptkeeper/services": "workspace:^1.0.0",
+    "@cryptkeeper/types": "workspace:^1.0.0"
+  }
 }

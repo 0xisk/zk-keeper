@@ -1,0 +1,22 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./dist/src/",
+        "paths": {
+            "@src/*": [
+                "./src/*"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ],
+    "references": [
+        { "path": "../config" },
+        { "path": "../types" },
+        { "path": "../services" },
+        { "path": "../controllers" },
+        { "path": "../constants" }
+    ]
+}

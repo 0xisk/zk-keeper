@@ -2,7 +2,7 @@ import { MerkleProof } from "@zk-kit/incremental-merkle-tree";
 import log from "loglevel";
 
 import { EventEmitter } from "@cryptkeeper/services";
-import { ZkIdentitySemaphore } from "packages/extension/src/background/services/zkIdentity/protocols/ZkIdentitySemaphore";
+import { ZkIdentitySemaphore } from "packages/services/src/zkIdentity/protocols/ZkIdentitySemaphore";
 import ZkProofService from "packages/extension/src/background/services/zkProof";
 // TODO: convert to seperate service pacakges @cryptkeeper/services TBD
 import { RPCAction } from "packages/extension/src/constants";
@@ -16,7 +16,7 @@ import {
   RLNFullProof,
   SelectedIdentity,
   SemaphoreProof,
-} from "packages/extension/src/types";
+} from "packages/types/src";
 
 const promises: {
   [k: string]: {

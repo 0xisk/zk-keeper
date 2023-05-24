@@ -1,4 +1,4 @@
-import { ZERO_ADDRESS } from "packages/extension/src/config/const";
+import { ZERO_ADDRESS } from "packages/config/src/const";
 
 import { sliceAddress, ellipsify } from "../account";
 

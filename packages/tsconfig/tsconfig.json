@@ -25,7 +25,6 @@
         // ],
         "module": "commonjs",
         "moduleResolution": "node",
-        "outDir": "dist/js",
         "resolveJsonModule": true,
 
         // Completeness
@@ -37,6 +36,10 @@
         "forceConsistentCasingInFileNames": true, 
         "allowSyntheticDefaultImports": true,
 
+        // Projects
+        "composite": true,
+        "incremental": true,
+        
         // Emit
         "declaration": true,
         "declarationMap": true,

@@ -62,3 +62,8 @@ demo/.parcel-cache
 /playwright-report/
 /playwright/.cache/
 tmp/
+
+# Monorepo
+**/node_modules/
+**/dist/
+**/.parcel-cache/

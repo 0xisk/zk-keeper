@@ -1,6 +1,6 @@
 import { browser } from "webextension-polyfill-ts";
 
-import type { MessageAction } from "packages/extension/src/types";
+import type { MessageAction } from "packages/types/src";
 
 export default async function postMessage<T>(message: MessageAction): Promise<T> {
   const [err, res] = (await browser.runtime.sendMessage(message)) as [string, T];

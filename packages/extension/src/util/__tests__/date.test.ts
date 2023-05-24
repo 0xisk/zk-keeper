@@ -1,4 +1,4 @@
-import { formatDate } from "../date";
+import { formatDate } from "../../../../react/src/util/date";
 
 describe("util/date", () => {
   test("should format date properly", () => {

@@ -5,13 +5,14 @@
   "main": "index.js",
   "packageManager": "pnpm@7.30.3",
   "scripts": {
+    "build:packages": "pnpm run --parallel --filter \"{packages}^...\" build:ts",
     "build": "env-cmd --silent -f .env cross-env NODE_ENV=production webpack --config webpack.prod.js --mode=production",
     "dev": "env-cmd --silent -f .env cross-env NODE_ENV=development webpack --config webpack.dev.js --mode=development",
+    "dev:chrome": "cross-env TARGET=chrome npm run dev",
+    "dev:firefox": "cross-env TARGET=firefox npm run dev",
     "build:e2e": "env-cmd --silent -f .env.test cross-env NODE_ENV=production webpack --config webpack.prod.js --mode=production",
     "build:chrome": "cross-env TARGET=chrome npm run build",
-    "dev:chrome": "cross-env TARGET=chrome npm run dev",
     "build:firefox": "cross-env TARGET=firefox npm run build",
-    "dev:firefox": "cross-env TARGET=firefox npm run dev",
     "merkle": "ts-node src/server/index.ts",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -120,7 +121,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@cryptkeeper/config": "workspace:^",
+    "@cryptkeeper/tsconfig": "workspace:*",
     "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-common-types": "^6.4.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",

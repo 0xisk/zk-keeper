@@ -1,14 +1,22 @@
 {
-  "extends": "@cryptkeeper/config/tsconfig.json",
+  "extends": "@cryptkeeper/tsconfig/tsconfig.json",
+  "references": [
+    { "path": "./packages/types/" },
+    { "path": "./packages/mocks/" },
+    { "path": "./packages/config" },
+    { "path": "./packages/connectors" },
+    { "path": "./packages/constants" },
+    { "path": "./packages/controllers" },
+    { "path": "./packages/services" },
+    { "path": "./packages/react" }
+  ],
   "compilerOptions": {
-    "baseUrl": ".",
-    "rootDir": ".",
     "paths": {
       "@cryptkeeper/providers": ["./packages/providers/src"],
-      "@cryptkeeper/services": ["./packages/services/src"],
-      "@src/*": ["packages/extension/src/*"]
+      "@cryptkeeper/extension": ["./packages/extension/src"],
+      "@cryptkeeper/services": ["./packages/servies/src"],
+      "@cryptkeeper/types": ["./packages/types/src"],
+      "@cryptkeeper/tsconfig": ["./packages/tsconfig"]
     }
-  },
-  "include": ["packages/extension/src", "e2e", "packages"],
-  "exclude": ["node_modules", "coverage", "dist"]
+  }
 }
