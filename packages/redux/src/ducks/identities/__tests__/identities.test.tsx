@@ -182,7 +182,9 @@ describe("ui/ducks/identities", () => {
   });
 
   test("should call create identity request action properly", async () => {
-    await Promise.resolve(store.dispatch(createIdentity("interrep", "signature", {})));
+    await Promise.resolve(store.dispatch(createIdentity("interrep", "signature", {
+      message: ""
+    })));
 
     expect(postMessage).toBeCalledTimes(1);
     expect(postMessage).toBeCalledWith({

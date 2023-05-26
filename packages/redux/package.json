@@ -1,9 +1,18 @@
 {
   "name": "@cryptkeeper/redux",
+  "private": "true",
   "version": "1.0.0",
   "description": "Cryptkeeper private redux package.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
   "scripts": {
+    "build:ts": "rm -rf dist && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
