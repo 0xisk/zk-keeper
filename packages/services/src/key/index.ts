@@ -4,17 +4,17 @@ import util from "tweetnacl-util";
 import { InitializationStep } from "@cryptkeeper/types";
 
 import { cryptoGenerateEncryptedHmac, cryptoGetAuthenticBackupCiphertext } from "@src/crypto";
-import LockerService from "@src/lock";
-import MiscStorageService from "@src/misc";
+import { LockerService } from "@src/locker";
+import { MiscStorageService } from "@src/misc";
 import { mnemonicToSeed } from "@src/mnemonic";
-import SimpleStorage from "@src/storage";
+import { SimpleStorage } from "@src/storage";
 
 import type { IBackupable } from "@src/backup";
 import type { KeyPair } from "./types";
 
 const KEY_STORAGE_DB_KEY = "@KEY-STORAGE@";
 
-export default class KeyStorageService implements IBackupable {
+export class KeyStorageService implements IBackupable {
   private static INSTANCE: KeyStorageService;
 
   private keyStorage: SimpleStorage;

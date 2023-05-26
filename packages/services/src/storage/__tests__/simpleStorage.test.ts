@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/unbound-method */
 import { browser } from "webextension-polyfill-ts";
 
-import SimpleStorage from "..";
+import { SimpleStorage } from "..";
 
 describe("services/simpleStorage", () => {
   afterEach(() => {

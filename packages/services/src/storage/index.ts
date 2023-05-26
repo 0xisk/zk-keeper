@@ -1,7 +1,7 @@
 import log from "loglevel";
 import { browser } from "webextension-polyfill-ts";
 
-export default class SimpleStorage {
+export class SimpleStorage {
   private key: string;
 
   constructor(key: string) {

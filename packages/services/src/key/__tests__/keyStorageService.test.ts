@@ -1,6 +1,6 @@
-import SimpleStorage from "@src/storage";
+import { SimpleStorage } from "@src/storage";
 
-import KeyStorageService from "..";
+import { KeyStorageService } from "..";
 
 const mockSerializedKeys = JSON.stringify({
   publicKey: "O2onvM62pC1io6jQKm8Nc2UyFXcd4kOmOsBIoYtZ2ik=",

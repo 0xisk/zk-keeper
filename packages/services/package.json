@@ -4,7 +4,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
   "scripts": {
+    "build:ts": "rm -rf dist && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,8 +30,9 @@
     "@cryptkeeper/config": "workspace:^1.0.0",
     "@cryptkeeper/constants": "workspace:^1.0.0",
     "@cryptkeeper/controllers": "workspace:^1.0.0",
-    "@cryptkeeper/react": "workspace:^1.0.0",
+    "@cryptkeeper/redux": "workspace:^1.0.0",
     "@cryptkeeper/types": "workspace:^",
+    "@cryptkeeper/ui": "workspace:^1.0.0",
     "crypto-js": "^4.1.1",
     "ethers": "^6.3.0",
     "nanoevents": "^7.0.1",

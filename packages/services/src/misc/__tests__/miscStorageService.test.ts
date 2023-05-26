@@ -1,7 +1,7 @@
 import { InitializationStep } from "@cryptkeeper/types";
 
-import MiscStorageService from "..";
-import SimpleStorage from "@src/storage";
+import { MiscStorageService } from "..";
+import { SimpleStorage } from "@src/storage";
 
 jest.mock("@src/storage");
 

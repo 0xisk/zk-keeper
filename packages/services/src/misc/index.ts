@@ -1,13 +1,13 @@
 import { InitializationStep } from "@cryptkeeper/types";
 
-import SimpleStorage from "@src/storage";
+import { SimpleStorage } from "@src/storage";
 
 import { InitializationData, ExteranalWalletConnectionData } from "./types";
 
 const WALLET_STORAGE_KEY = "@@WALLET@@";
 const INITIALIZATION_STORAGE_KEY = "@@INITIALIZED@@";
 
-export default class MiscStorageService {
+export class MiscStorageService {
   private static INSTANCE: MiscStorageService;
 
   private externalWalletStorage: SimpleStorage;

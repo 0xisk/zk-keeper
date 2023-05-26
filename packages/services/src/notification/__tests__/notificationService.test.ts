@@ -1,6 +1,6 @@
 import { browser } from "webextension-polyfill-ts";
 
-import NotificationService, { CreateNotificationArgs } from "..";
+import { CreateNotificationArgs, NotificationService } from "..";
 
 describe("services/notification", () => {
   const defaultId = "1";

@@ -1,5 +1,2 @@
-import BackupService from "./BackupService";
-
-export * from "./types";
-
-export default BackupService;
+export { BackupService } from "./BackupService";
+export { type IBackupable } from "./types";

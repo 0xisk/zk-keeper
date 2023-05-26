@@ -1,6 +1,6 @@
 import { ZkInputs } from "@cryptkeeper/types";
 
-import { validateZkInputs } from "..";
+import { validateZkInputs } from "../validator";
 
 describe("services/zkValidator", () => {
   test("should validate proof properly", () => {

@@ -11,7 +11,7 @@ export interface CreateNotificationArgs {
   };
 }
 
-export default class NotificationService {
+export class NotificationService {
   private static INSTANCE: NotificationService;
 
   private constructor() {

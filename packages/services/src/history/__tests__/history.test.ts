@@ -2,8 +2,9 @@ import { ZERO_ADDRESS } from "@cryptkeeper/constants";
 import { getEnabledFeatures } from "@cryptkeeper/config";
 import { Operation, OperationType } from "@cryptkeeper/types";
 
-import HistoryService from "..";
-import SimpleStorage from "@src/storage";
+import { SimpleStorage } from "@src/storage";
+
+import { HistoryService } from "..";
 
 const mockDefaultOperations: Operation[] = [
   {

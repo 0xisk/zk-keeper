@@ -1,4 +1,4 @@
-import BackupService, { type IBackupable } from "..";
+import { type IBackupable, BackupService } from "..";
 
 jest.mock("@src/history", (): unknown => ({
   getInstance: jest.fn(() => ({

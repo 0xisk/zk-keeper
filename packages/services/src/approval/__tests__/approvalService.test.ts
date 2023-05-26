@@ -1,5 +1,5 @@
-import SimpleStorage from "@src/storage";
-import ApprovalService from "@src/approval";
+import { SimpleStorage } from "@src/storage";
+import { ApprovalService } from "@src/approval";
 
 const mockDefaultHosts = ["https://localhost:3000"];
 const mockSerializedApprovals = JSON.stringify([[mockDefaultHosts[0], { noApproval: true }]]);

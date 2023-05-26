@@ -1,12 +1,12 @@
 import { browser } from "webextension-polyfill-ts";
 import { OperationType, type IUploadArgs } from "@cryptkeeper/types";
 
-import HistoryService from "@src/history";
-import NotificationService from "@src/notification";
+import { HistoryService } from "@src/history";
+import { NotificationService } from "@src/notification";
 
 import { type IBackupable } from "./types";
 
-export default class BackupService {
+export class BackupService {
   private static INSTANCE: BackupService;
 
   private backupables: Map<string, IBackupable>;

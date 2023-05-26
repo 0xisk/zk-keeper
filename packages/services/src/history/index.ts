@@ -3,16 +3,16 @@ import { browser } from "webextension-polyfill-ts";
 import { getEnabledFeatures } from "@cryptkeeper/config";
 import { HistorySettings, Operation, OperationType } from "@cryptkeeper/types";
 
-import LockerService from "@src/lock";
-import NotificationService from "@src/notification";
-import SimpleStorage from "@src/storage";
+import { LockerService } from "@src/locker";
+import { NotificationService } from "@src/notification";
+import { SimpleStorage } from "@src/storage";
 
 import { ILoadOperationsData, OperationFilter, OperationOptions } from "./types";
 
 const HISTORY_KEY = "@@HISTORY@@";
 const HISTORY_SETTINGS_KEY = "@@HISTORY-SETTINGS@@";
 
-export default class HistoryService {
+export class HistoryService {
   private static INSTANCE: HistoryService;
 
   private historyStore: SimpleStorage;

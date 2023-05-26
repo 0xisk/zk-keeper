@@ -1,6 +1,6 @@
 import { cryptoGenerateEncryptedHmac, cryptoGetAuthenticBackupCiphertext } from "@src/crypto";
-import LockerService from "@src/lock";
-import SimpleStorage from "@src/storage";
+import { LockerService } from "@src/locker";
+import { SimpleStorage } from "@src/storage";
 
 import type { IBackupable } from "@src/backup";
 
@@ -10,7 +10,7 @@ interface HostPermission {
   noApproval: boolean;
 }
 
-export default class ApprovalService implements IBackupable {
+export class ApprovalService implements IBackupable {
   private static INSTANCE: ApprovalService;
 
   private allowedHosts: Map<string, HostPermission>;
