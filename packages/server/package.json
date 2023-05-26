@@ -1,0 +1,30 @@
+{
+  "name": "@cryptkeeper/server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "scripts": {
+    "build:ts": "rm -rf dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cryptkeeper/services": "workspace:^1.0.0",
+    "@semaphore-protocol/group": "^3.10.1",
+    "@semaphore-protocol/identity": "^3.10.1",
+    "@zk-kit/incremental-merkle-tree": "^1.1.0",
+    "bigint-conversion": "^2.4.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "loglevel": "^1.8.1"
+  }
+}
