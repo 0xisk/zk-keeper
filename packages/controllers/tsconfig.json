@@ -1,13 +1,12 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "rootDir": "./src",
-        "outDir": "./dist/src/"
-    },
-    "include": [
-        "src"
-    ],
-    "references": [
-        { "path": "../types" }
-    ]
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist/src/",
+    "paths": {
+      "@src/*": ["./src/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "../types" }, { "path": "../redux" }]
 }
