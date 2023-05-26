@@ -1,3 +1,4 @@
+export { ellipsify, sliceAddress } from "./address";
 export {
   BrowserController,
   postMessage,
@@ -8,5 +9,5 @@ export {
   downloadFile,
   copyToClipboard,
 } from "./browser";
-export { Handler } from "./handler";
-export { RequestManager } from "./requestManager";
+export { HandlerController } from "./handler";
+export { RequestController } from "./request";

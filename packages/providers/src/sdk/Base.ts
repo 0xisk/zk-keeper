@@ -1,11 +1,8 @@
 import { MerkleProof } from "@zk-kit/incremental-merkle-tree";
 import log from "loglevel";
 
-import { EventEmitter } from "@cryptkeeper/services";
-import { ZkIdentitySemaphore } from "packages/services/src/zkIdentity/protocols/ZkIdentitySemaphore";
-import ZkProofService from "packages/extension/src/background/services/zkProof";
-// TODO: convert to seperate service pacakges @cryptkeeper/services TBD
-import { RPCAction } from "packages/extension/src/constants";
+import { EventEmitter, SemaphoreIdentity, ProofService } from "@cryptkeeper/services";
+import { RPCAction } from "@cryptkeeper/constants";
 import {
   Approvals,
   IRlnGenerateArgs,
@@ -16,7 +13,7 @@ import {
   RLNFullProof,
   SelectedIdentity,
   SemaphoreProof,
-} from "packages/types/src";
+} from "@cryptkeeper/types";
 
 const promises: {
   [k: string]: {
@@ -30,12 +27,12 @@ export class CryptKeeperInjectedProvider extends EventEmitter {
 
   private nonce: number;
 
-  private zkProofService: ZkProofService;
+  private zkProofService: ProofService;
 
   constructor() {
     super();
     this.nonce = 0;
-    this.zkProofService = ZkProofService.getInstance();
+    this.zkProofService = ProofService.getInstance();
   }
 
   /**
@@ -215,7 +212,7 @@ export class CryptKeeperInjectedProvider extends EventEmitter {
     })) as ISemaphoreGenerateArgs;
 
     return this.zkProofService.generateSemaphoreProof(
-      ZkIdentitySemaphore.genFromSerialized(request.identity),
+      SemaphoreIdentity.genFromSerialized(request.identity),
       request.payload,
     );
   }
@@ -242,9 +239,6 @@ export class CryptKeeperInjectedProvider extends EventEmitter {
       },
     })) as IRlnGenerateArgs;
 
-    return this.zkProofService.generateRLNProof(
-      ZkIdentitySemaphore.genFromSerialized(request.identity),
-      request.payload,
-    );
+    return this.zkProofService.generateRLNProof(SemaphoreIdentity.genFromSerialized(request.identity), request.payload);
   }
 }

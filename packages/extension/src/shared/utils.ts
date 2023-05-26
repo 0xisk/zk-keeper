@@ -1,4 +1,4 @@
-import { DeferredPromise } from "packages/types/src";
+import { DeferredPromise } from "@cryptkeeper/types";
 
 /**
  * @src Metamask extension

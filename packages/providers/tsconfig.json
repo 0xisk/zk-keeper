@@ -1,10 +1,9 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "rootDir": "./src",
-        "outDir": "./dist/src/",
-    },
-    "include": [
-        "src"
-    ]
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist/src/"
+  },
+  "include": ["src"],
+  "references": [{ "path": "../constants" }, { "path": "../services" }, { "path": "../types" }]
 }

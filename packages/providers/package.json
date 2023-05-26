@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
   "scripts": {
-    "build": "rm -rf dist && tsc",
+    "build:ts": "rm -rf dist && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,8 +22,9 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@cryptkeeper/extension": "workspace:^",
+    "@cryptkeeper/constants": "workspace:^1.0.0",
     "@cryptkeeper/services": "workspace:^1.0.0",
+    "@cryptkeeper/types": "workspace:^1.0.0",
     "@zk-kit/incremental-merkle-tree": "^1.1.0"
   }
 }

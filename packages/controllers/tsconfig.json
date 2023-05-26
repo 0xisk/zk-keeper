@@ -8,5 +8,5 @@
     }
   },
   "include": ["src"],
-  "references": [{ "path": "../types" }, { "path": "../redux" }]
+  "references": [{ "path": "../types" }, { "path": "../redux" }, { "path": "../constants" }]
 }

@@ -1,25 +1,27 @@
 import log from "loglevel";
 import { browser } from "webextension-polyfill-ts";
 import { RPCAction } from "@cryptkeeper/constants";
-import { PendingRequestType, RLNProofRequest, SemaphoreProofRequest, BackupableServices, Approvals } from "@cryptkeeper/types";
-import { BrowserController } from "@cryptkeeper/controllers/browser";
+import {
+  PendingRequestType,
+  RLNProofRequest,
+  SemaphoreProofRequest,
+  BackupableServices,
+  Approvals,
+} from "@cryptkeeper/types";
+import { BrowserController, HandlerController, RequestController } from "@cryptkeeper/controllers";
+import {
+  ApprovalService,
+  BackupService,
+  HistoryService,
+  KeyStorageService,
+  LockerService,
+  MiscStorageService,
+  IdentityService,
+  validateZkInputs,
+} from "@cryptkeeper/services";
 
-import Handler from "./controllers/handler";
-import RequestManager from "./controllers/requestManager";
-
-import { ApprovalService } from "@cryptkeeper/services";
-import BackupService from "../../../services/src/backup";
-import HistoryService from "../../../services/src/history";
-import KeyStorageService from "../../../services/src/key";
-import LockerService from "../../../services/src/lock";
-import MiscStorageService from "../../../services/src/misc";
-import { validateZkInputs } from "../../../services/src/validation";
-import ZkIdentityService from "../../../services/src/zkIdentity";
-
-export default class CryptKeeperController extends Handler {
-  private zkIdentityService: ZkIdentityService;
-
-  private requestManager: RequestManager;
+export default class CryptKeeperController extends HandlerController {
+  private identityService: IdentityService;
 
   private approvalService: ApprovalService;
 
@@ -35,19 +37,21 @@ export default class CryptKeeperController extends Handler {
 
   private browserController: BrowserController;
 
+  private requestController: RequestController;
+
   constructor() {
     super();
-    this.requestManager = new RequestManager();
-    this.zkIdentityService = ZkIdentityService.getInstance();
+    this.requestController = new RequestController();
+    this.browserController = BrowserController.getInstance();
+    this.identityService = IdentityService.getInstance();
     this.approvalService = ApprovalService.getInstance();
     this.miscStorageService = MiscStorageService.getInstance();
     this.lockService = LockerService.getInstance();
-    this.browserController = BrowserController.getInstance();
     this.historyService = HistoryService.getInstance();
     this.keyStorageService = KeyStorageService.getInstance();
     this.backupService = BackupService.getInstance()
       .add(BackupableServices.APPROVAL, this.approvalService)
-      .add(BackupableServices.IDENTITY, this.zkIdentityService)
+      .add(BackupableServices.IDENTITY, this.identityService)
       .add(BackupableServices.LOCK, this.lockService);
   }
 
@@ -56,7 +60,7 @@ export default class CryptKeeperController extends Handler {
     this.add(
       RPCAction.UNLOCK,
       this.lockService.unlock,
-      this.zkIdentityService.unlock,
+      this.identityService.unlock,
       this.approvalService.unlock,
       this.lockService.onUnlocked,
     );
@@ -72,22 +76,22 @@ export default class CryptKeeperController extends Handler {
     this.add(RPCAction.GET_STATUS, this.lockService.getStatus);
 
     // requests
-    this.add(RPCAction.GET_PENDING_REQUESTS, this.lockService.ensure, this.requestManager.getRequests);
-    this.add(RPCAction.FINALIZE_REQUEST, this.lockService.ensure, this.requestManager.finalizeRequest);
+    this.add(RPCAction.GET_PENDING_REQUESTS, this.lockService.ensure, this.requestController.getRequests);
+    this.add(RPCAction.FINALIZE_REQUEST, this.lockService.ensure, this.requestController.finalizeRequest);
 
     // lock
     this.add(RPCAction.SETUP_PASSWORD, this.lockService.setupPassword);
 
     // Identities
-    this.add(RPCAction.GET_COMMITMENTS, this.lockService.ensure, this.zkIdentityService.getIdentityCommitments);
-    this.add(RPCAction.GET_IDENTITIES, this.lockService.ensure, this.zkIdentityService.getIdentities);
-    this.add(RPCAction.GET_ACTIVE_IDENTITY_DATA, this.lockService.ensure, this.zkIdentityService.getActiveIdentityData);
-    this.add(RPCAction.SET_ACTIVE_IDENTITY, this.lockService.ensure, this.zkIdentityService.setActiveIdentity);
-    this.add(RPCAction.SET_IDENTITY_NAME, this.lockService.ensure, this.zkIdentityService.setIdentityName);
-    this.add(RPCAction.CREATE_IDENTITY_REQ, this.lockService.ensure, this.zkIdentityService.createIdentityRequest);
-    this.add(RPCAction.CREATE_IDENTITY, this.lockService.ensure, this.zkIdentityService.createIdentity);
-    this.add(RPCAction.DELETE_IDENTITY, this.lockService.ensure, this.zkIdentityService.deleteIdentity);
-    this.add(RPCAction.DELETE_ALL_IDENTITIES, this.lockService.ensure, this.zkIdentityService.deleteAllIdentities);
+    this.add(RPCAction.GET_COMMITMENTS, this.lockService.ensure, this.identityService.getIdentityCommitments);
+    this.add(RPCAction.GET_IDENTITIES, this.lockService.ensure, this.identityService.getIdentities);
+    this.add(RPCAction.GET_ACTIVE_IDENTITY_DATA, this.lockService.ensure, this.identityService.getActiveIdentityData);
+    this.add(RPCAction.SET_ACTIVE_IDENTITY, this.lockService.ensure, this.identityService.setActiveIdentity);
+    this.add(RPCAction.SET_IDENTITY_NAME, this.lockService.ensure, this.identityService.setIdentityName);
+    this.add(RPCAction.CREATE_IDENTITY_REQ, this.lockService.ensure, this.identityService.createIdentityRequest);
+    this.add(RPCAction.CREATE_IDENTITY, this.lockService.ensure, this.identityService.createIdentity);
+    this.add(RPCAction.DELETE_IDENTITY, this.lockService.ensure, this.identityService.deleteIdentity);
+    this.add(RPCAction.DELETE_ALL_IDENTITIES, this.lockService.ensure, this.identityService.deleteAllIdentities);
 
     // History
     this.add(RPCAction.GET_IDENTITY_HISTORY, this.lockService.ensure, this.historyService.getOperations);
@@ -122,7 +126,7 @@ export default class CryptKeeperController extends Handler {
           await this.lockService.awaitUnlock();
         }
 
-        const identity = await this.zkIdentityService.getActiveIdentity();
+        const identity = await this.identityService.getActiveIdentity();
         const approved = this.approvalService.isApproved(meta.origin);
         const permission = this.approvalService.getPermission(meta.origin);
 
@@ -143,7 +147,7 @@ export default class CryptKeeperController extends Handler {
           };
 
           if (!permission.noApproval) {
-            await this.requestManager.newRequest(PendingRequestType.SEMAPHORE_PROOF, {
+            await this.requestController.newRequest(PendingRequestType.SEMAPHORE_PROOF, {
               ...request,
               origin: meta.origin,
             });
@@ -161,7 +165,7 @@ export default class CryptKeeperController extends Handler {
       this.lockService.ensure,
       validateZkInputs,
       async (payload: RLNProofRequest, meta: { origin: string }) => {
-        const identity = await this.zkIdentityService.getActiveIdentity();
+        const identity = await this.identityService.getActiveIdentity();
         const approved = this.approvalService.isApproved(meta.origin);
         const permission = this.approvalService.getPermission(meta.origin);
 
@@ -187,7 +191,7 @@ export default class CryptKeeperController extends Handler {
           };
 
           if (!permission.noApproval) {
-            await this.requestManager.newRequest(PendingRequestType.RLN_PROOF, {
+            await this.requestController.newRequest(PendingRequestType.RLN_PROOF, {
               ...request,
               origin: meta.origin,
             });
@@ -222,7 +226,7 @@ export default class CryptKeeperController extends Handler {
       }
 
       try {
-        await this.requestManager.newRequest(PendingRequestType.INJECT, { origin: host });
+        await this.requestController.newRequest(PendingRequestType.INJECT, { origin: host });
         return { isApproved: true, canSkipApprove: false };
       } catch (e) {
         log.error(e);

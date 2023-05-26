@@ -1,16 +1,9 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "rootDir": "./src/",
-        "outDir": "./dist/src/"
-    },
-    "include": [
-        "src"
-    ],
-    "references": [
-        { "path": "../config" },
-        { "path": "../connectors" },
-        { "path": "../constants" },
-        { "path": "../react" }
-    ]
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src/",
+    "outDir": "./dist/src/"
+  },
+  "include": ["src"],
+  "references": [{ "path": "../config" }, { "path": "../connectors" }, { "path": "../constants" }, { "path": "../ui" }]
 }

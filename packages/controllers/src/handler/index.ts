@@ -9,7 +9,7 @@ type Chain = {
   handler: HandlerType;
 };
 
-export class Handler {
+export class HandlerController {
   private handlers: Map<string, Chain>;
 
   constructor() {

@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist/src/",
+    "paths": {
+      "@src/*": ["./src/*"]
+    },
+    // Modules
+    "typeRoots": ["./node_modules/@types", "custom.d.ts"]
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../config" },
+    { "path": "../connectors" },
+    { "path": "../constants" },
+    { "path": "../controllers" },
+    { "path": "../mocks" },
+    { "path": "../types" },
+    { "path": "../redux" },
+    { "path": "../services" }
+  ]
+}
