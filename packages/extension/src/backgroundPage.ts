@@ -6,7 +6,6 @@ import { RequestHandler } from "@cryptkeeper/types";
 
 import CryptKeeperController from "./cryptKeeper";
 import { deferredPromise } from "./shared/utils";
-
 import "./appInit";
 import "./shared/initGlobals";
 

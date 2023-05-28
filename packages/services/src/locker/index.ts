@@ -1,8 +1,6 @@
-import { browser } from "webextension-polyfill-ts";
-import { InitializationStep } from "@cryptkeeper/types";
 import { pushMessage } from "@cryptkeeper/controllers";
 import { setStatus } from "@cryptkeeper/redux";
-
+import { InitializationStep } from "@cryptkeeper/types";
 import {
   cryptoDecrypt,
   cryptoEncrypt,
@@ -11,9 +9,10 @@ import {
 } from "@src/crypto";
 import { MiscStorageService } from "@src/misc";
 import { SimpleStorage } from "@src/storage";
+import { browser } from "webextension-polyfill-ts";
 
-import type { IBackupable } from "@src/backup";
 import type { AuthenticityCheckData } from "./types";
+import type { IBackupable } from "@src/backup";
 
 const PASSWORD_DB_KEY = "@password@";
 

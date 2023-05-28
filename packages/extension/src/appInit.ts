@@ -2,9 +2,8 @@
 // @src Metamask https://github.com/MetaMask/metamask-extension/blob/develop/app/scripts/app-init.js
 
 // TODO: importing scripts better using importScritps() check MM
-import log from "loglevel";
-
 import { isDebugMode } from "@cryptkeeper/config";
+import log from "loglevel";
 
 import { importAllScripts } from "./shared/importScripts";
 

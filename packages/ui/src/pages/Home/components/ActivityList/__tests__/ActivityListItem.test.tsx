@@ -2,9 +2,9 @@
  * @jest-environment jsdom
  */
 
-import { act, render, screen } from "@testing-library/react";
 import { ZERO_ADDRESS } from "@cryptkeeper/constants";
 import { IdentityData, Operation, OperationType } from "@cryptkeeper/types";
+import { act, render, screen } from "@testing-library/react";
 
 import { ActivityItem, IActivityItemProps } from "../Item";
 

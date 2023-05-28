@@ -2,11 +2,10 @@
  * @jest-environment jsdom
  */
 
+import { Paths } from "@cryptkeeper/constants";
+import { setupPassword, useAppDispatch } from "@cryptkeeper/redux";
 import { act, renderHook, waitFor } from "@testing-library/react";
 import { useNavigate } from "react-router-dom";
-import { Paths } from "@cryptkeeper/constants";
-
-import { setupPassword, useAppDispatch } from "@cryptkeeper/redux";
 
 import type { ChangeEvent, FormEvent } from "react";
 

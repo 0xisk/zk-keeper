@@ -1,7 +1,6 @@
+import { Icon } from "@src/components/Icon";
 import classNames from "classnames";
 import { ChangeEventHandler } from "react";
-
-import { Icon } from "@src/components/Icon";
 
 import "./checkbox.scss";
 

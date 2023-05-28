@@ -2,10 +2,10 @@
  * @jest-environment jsdom
  */
 
+import { downloadFile } from "@cryptkeeper/controllers";
+import { downloadBackup, useAppDispatch } from "@cryptkeeper/redux";
 import { act, renderHook, waitFor } from "@testing-library/react";
 import { useNavigate } from "react-router-dom";
-import { downloadBackup, useAppDispatch } from "@cryptkeeper/redux";
-import { downloadFile } from "@cryptkeeper/controllers";
 
 import type { ChangeEvent, FormEvent } from "react";
 

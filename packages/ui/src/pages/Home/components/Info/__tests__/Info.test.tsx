@@ -2,12 +2,12 @@
  * @jest-environment jsdom
  */
 
-import { act, render, screen } from "@testing-library/react";
-import { createModalRoot, deleteModalRoot } from "@cryptkeeper/mocks";
 import { sliceAddress } from "@cryptkeeper/controllers";
-
+import { createModalRoot, deleteModalRoot } from "@cryptkeeper/mocks";
 import { IUseConnectionModalData, useConnectionModal } from "@src/components/ConnectionModal/useConnectionModal";
 import { defaultWalletHookData } from "@src/hooks";
+import { act, render, screen } from "@testing-library/react";
+
 import { Info, InfoProps } from "..";
 
 jest.mock("@src/ui/components/ConnectionModal/useConnectionModal", (): unknown => ({

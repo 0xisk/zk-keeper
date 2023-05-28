@@ -2,13 +2,12 @@
  * @jest-environment jsdom
  */
 
+import { RPCAction } from "@cryptkeeper/constants";
+import { postMessage } from "@cryptkeeper/controllers";
+import { PendingRequest, PendingRequestType, RequestResolutionStatus } from "@cryptkeeper/types";
+import { store } from "@src/store";
 import { renderHook } from "@testing-library/react";
 import { Provider } from "react-redux";
-import { RPCAction } from "@cryptkeeper/constants";
-import { PendingRequest, PendingRequestType, RequestResolutionStatus } from "@cryptkeeper/types";
-import { postMessage } from "@cryptkeeper/controllers";
-
-import { store } from "@src/store";
 
 import { fetchPendingRequests, finalizeRequest, setPendingRequests, usePendingRequests } from "..";
 

@@ -1,7 +1,6 @@
+import { ConfirmDangerModal } from "@src/components/ConfirmDangerModal";
 import classNames from "classnames";
 import { ReactNode } from "react";
-
-import { ConfirmDangerModal } from "@src/components/ConfirmDangerModal";
 
 import { Icon } from "../Icon";
 

@@ -1,8 +1,7 @@
+import { MockConnector } from "@cryptkeeper/mocks";
 import { MetaMask } from "@web3-react/metamask";
 
 import type { Connector } from "@web3-react/types";
-
-import { MockConnector } from "@cryptkeeper/mocks";
 
 export enum ConnectorNames {
   METAMASK = "MetaMask",

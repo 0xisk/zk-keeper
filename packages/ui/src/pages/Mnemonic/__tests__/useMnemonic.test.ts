@@ -2,11 +2,11 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook, waitFor } from "@testing-library/react";
-import { useNavigate } from "react-router-dom";
 import { Paths } from "@cryptkeeper/constants";
 import { saveMnemonic, useAppStatus, useAppDispatch } from "@cryptkeeper/redux";
 import { IUseTimeoutData, useTimeout } from "@src/hooks/timeout";
+import { act, renderHook, waitFor } from "@testing-library/react";
+import { useNavigate } from "react-router-dom";
 
 import { useMnemonic } from "../useMnemonic";
 

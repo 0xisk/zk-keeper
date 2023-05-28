@@ -2,11 +2,11 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook, waitFor } from "@testing-library/react";
-import { useWeb3React } from "@web3-react/core";
 import { ConnectorNames, metamask } from "@cryptkeeper/connectors";
 import { mockConnector } from "@cryptkeeper/mocks";
 import { useAppDispatch, getWalletConnection, lock, setWalletConnection, useAppStatus } from "@cryptkeeper/redux";
+import { act, renderHook, waitFor } from "@testing-library/react";
+import { useWeb3React } from "@web3-react/core";
 
 import { defaultWalletHookData, useWallet } from "..";
 

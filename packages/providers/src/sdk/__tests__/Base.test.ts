@@ -31,7 +31,7 @@ describe("providers/sdk/Base", () => {
 
   test("Should be able to use the provider to make a connection", async () => {
     const postMessageSpy = jest.spyOn(window, "postMessage");
-    //postMessageSpy.mockResolvedValue(["Result", null])
+    // postMessageSpy.mockResolvedValue(["Result", null])
     (window.postMessage as jest.Mock).mockResolvedValue(["Result", null]);
     const provider = new CryptKeeperInjectedProvider();
     (provider.connect as jest.Mock).mockResolvedValue(provider);

@@ -2,11 +2,10 @@
  * @jest-environment jsdom
  */
 
+import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { render, waitFor } from "@testing-library/react";
 import { Suspense } from "react";
 import { useNavigate } from "react-router-dom";
-
-import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 
 import Home from "..";
 import { IUseHomeData, useHome } from "../useHome";

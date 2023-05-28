@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "types": ["node", "jest", "@testing-library/jest-dom"], 
+    
     // Classification follows https://www.typescriptlang.org/tsconfig
     // Language and Environment
     "target": "ES2020",

@@ -1,6 +1,6 @@
-import { useCallback, useState } from "react";
-import { PendingRequest, RequestResolutionAction, RequestResolutionStatus } from "@cryptkeeper/types";
 import { useAppDispatch, finalizeRequest, usePendingRequests } from "@cryptkeeper/redux";
+import { PendingRequest, RequestResolutionAction, RequestResolutionStatus } from "@cryptkeeper/types";
+import { useCallback, useState } from "react";
 
 export interface IUseConfirmRequestModalData {
   error: string;

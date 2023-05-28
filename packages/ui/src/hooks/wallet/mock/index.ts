@@ -1,9 +1,8 @@
-import BigNumber from "bignumber.js";
-
-import { ConnectorNames } from "@cryptkeeper/connectors";
-import { mockConnector } from "@cryptkeeper/mocks";
-import { ZERO_ADDRESS } from "@cryptkeeper/constants";
 import { getChains } from "@cryptkeeper/config";
+import { ConnectorNames } from "@cryptkeeper/connectors";
+import { ZERO_ADDRESS } from "@cryptkeeper/constants";
+import { mockConnector } from "@cryptkeeper/mocks";
+import BigNumber from "bignumber.js";
 
 import type { IUseWalletData } from "..";
 import type { BrowserProvider } from "ethers/types/providers";

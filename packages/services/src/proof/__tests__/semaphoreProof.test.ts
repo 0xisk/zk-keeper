@@ -1,5 +1,4 @@
 import { ISemaphoreGenerateArgs } from "@cryptkeeper/types";
-
 import { SemaphoreIdentity } from "@src/identity";
 
 import { ProofService } from "../ProofService";

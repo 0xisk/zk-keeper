@@ -1,11 +1,10 @@
-import { Controller } from "react-hook-form";
 import { getEnabledFeatures } from "@cryptkeeper/config";
 import { IDENTITY_TYPES, WEB2_PROVIDER_OPTIONS } from "@cryptkeeper/constants";
-
 import { Button } from "@src/components/Button";
 import { Dropdown } from "@src/components/Dropdown";
 import { FullModal, FullModalContent, FullModalFooter, FullModalHeader } from "@src/components/FullModal";
 import { Input } from "@src/components/Input";
+import { Controller } from "react-hook-form";
 
 import "./createIdentityStyles.scss";
 import { useCreateIdentity } from "./useCreateIdentity";

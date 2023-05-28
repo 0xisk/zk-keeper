@@ -2,10 +2,10 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook, waitFor } from "@testing-library/react";
-import { useNavigate } from "react-router-dom";
 import { Paths } from "@cryptkeeper/constants";
 import { useAppDispatch } from "@cryptkeeper/redux";
+import { act, renderHook, waitFor } from "@testing-library/react";
+import { useNavigate } from "react-router-dom";
 
 import type { ChangeEvent, FormEvent } from "react";
 

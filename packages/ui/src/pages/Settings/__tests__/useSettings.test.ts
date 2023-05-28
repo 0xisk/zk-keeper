@@ -2,11 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook, waitFor } from "@testing-library/react";
-import { useNavigate } from "react-router-dom";
-
 import { Paths } from "@cryptkeeper/constants";
-import { HistorySettings } from "@cryptkeeper/types";
 import {
   useAppDispatch,
   clearHistory,
@@ -15,6 +11,9 @@ import {
   fetchHistory,
   useHistorySettings,
 } from "@cryptkeeper/redux";
+import { HistorySettings } from "@cryptkeeper/types";
+import { act, renderHook, waitFor } from "@testing-library/react";
+import { useNavigate } from "react-router-dom";
 
 import type { SyntheticEvent } from "react";
 

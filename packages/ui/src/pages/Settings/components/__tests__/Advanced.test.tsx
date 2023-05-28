@@ -2,9 +2,9 @@
  * @jest-environment jsdom
  */
 
+import { getEnabledFeatures } from "@cryptkeeper/config";
 import { act, render, waitFor } from "@testing-library/react";
 import { Suspense } from "react";
-import { getEnabledFeatures } from "@cryptkeeper/config";
 
 import { Advanced, IAdvancedProps } from "..";
 

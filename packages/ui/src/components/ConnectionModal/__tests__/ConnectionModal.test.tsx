@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import { act, render, screen } from "@testing-library/react";
 import { createModalRoot, deleteModalRoot } from "@cryptkeeper/mocks";
+import { act, render, screen } from "@testing-library/react";
 
 import { ConnectionModal, ConnectionModalProps } from "..";
 import { IUseConnectionModalData, useConnectionModal } from "../useConnectionModal";

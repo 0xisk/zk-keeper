@@ -1,7 +1,6 @@
+import { PendingRequest, PendingRequestType, ZKProofPayload } from "@cryptkeeper/types";
 import { getLinkPreview } from "link-preview-js";
 import { useCallback, useEffect, useState } from "react";
-
-import { PendingRequest, PendingRequestType, ZKProofPayload } from "@cryptkeeper/types";
 
 export interface IUseProofModalArgs {
   pendingRequest: PendingRequest<ZKProofPayload>;

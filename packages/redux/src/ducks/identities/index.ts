@@ -1,7 +1,6 @@
 /* eslint-disable no-param-reassign */
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import deepEqual from "fast-deep-equal";
 import { RPCAction } from "@cryptkeeper/constants";
+import { postMessage } from "@cryptkeeper/controllers";
 import {
   CreateIdentityOptions,
   HistorySettings,
@@ -10,9 +9,9 @@ import {
   Operation,
   SelectedIdentity,
 } from "@cryptkeeper/types";
-import { postMessage } from "@cryptkeeper/controllers";
-
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { useAppSelector } from "@src/hooks";
+import deepEqual from "fast-deep-equal";
 
 import type { TypedThunk } from "@src/store";
 

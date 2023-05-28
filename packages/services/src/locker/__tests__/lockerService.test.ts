@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/unbound-method */
-import { browser } from "webextension-polyfill-ts";
-import { InitializationStep } from "@cryptkeeper/types";
-import { setStatus } from "@cryptkeeper/redux";
 import { pushMessage } from "@cryptkeeper/controllers";
-
-import { SimpleStorage } from "@src/storage";
+import { setStatus } from "@cryptkeeper/redux";
+import { InitializationStep } from "@cryptkeeper/types";
 import { cryptoDecrypt } from "@src/crypto";
+import { SimpleStorage } from "@src/storage";
+import { browser } from "webextension-polyfill-ts";
 
 import { LockerService } from "..";
 

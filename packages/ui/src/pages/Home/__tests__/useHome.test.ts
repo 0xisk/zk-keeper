@@ -2,13 +2,13 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook } from "@testing-library/react";
-import { useRef } from "react";
-import { IdentityData } from "@cryptkeeper/types";
 import { getLastActiveTabUrl } from "@cryptkeeper/controllers";
 import { useAppDispatch, useIdentities, fetchIdentities, fetchHistory, checkHostApproval } from "@cryptkeeper/redux";
-
+import { IdentityData } from "@cryptkeeper/types";
 import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
+import { act, renderHook } from "@testing-library/react";
+import { useRef } from "react";
+
 import { useHome } from "../useHome";
 
 jest.mock("react", (): unknown => ({

@@ -6,9 +6,7 @@ import { act, render } from "@testing-library/react";
 import { useNavigate } from "react-router-dom";
 import { Paths } from "@cryptkeeper/constants";
 import { getExtensionUrl, redirectToNewTab } from "@cryptkeeper/controllers";
-
 import {} from "@cryptkeeper/mocks";
-
 import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 
 import { Header } from "..";

@@ -1,7 +1,7 @@
+import { SelectOption } from "@cryptkeeper/types";
 import classNames from "classnames";
 import { forwardRef, Ref } from "react";
 import Select, { Props as SelectProps, SelectInstance } from "react-select";
-import { SelectOption } from "@cryptkeeper/types";
 
 import "./dropdown.scss";
 import { IconOption } from "./IconOption";

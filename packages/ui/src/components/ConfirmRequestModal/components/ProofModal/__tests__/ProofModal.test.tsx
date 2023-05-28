@@ -2,9 +2,9 @@
  * @jest-environment jsdom
  */
 
-import { act, render, screen } from "@testing-library/react";
 import { createModalRoot, deleteModalRoot } from "@cryptkeeper/mocks";
 import { PendingRequestType } from "@cryptkeeper/types";
+import { act, render, screen } from "@testing-library/react";
 
 import { ProofModal, ProofModalProps } from "..";
 import { IUseProofModalData, useProofModal } from "../useProofModal";

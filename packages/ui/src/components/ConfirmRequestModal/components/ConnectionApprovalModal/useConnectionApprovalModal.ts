@@ -1,7 +1,7 @@
+import { useAppDispatch, fetchHostPermissions, setHostPermissions, useHostPermission } from "@cryptkeeper/redux";
+import { PendingRequest } from "@cryptkeeper/types";
 import { getLinkPreview } from "link-preview-js";
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
-import { PendingRequest } from "@cryptkeeper/types";
-import { useAppDispatch, fetchHostPermissions, setHostPermissions, useHostPermission } from "@cryptkeeper/redux";
 
 export interface IUseConnectionApprovalModalArgs {
   pendingRequest: PendingRequest<{ origin: string }>;

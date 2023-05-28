@@ -1,14 +1,11 @@
 /* eslint-disable @typescript-eslint/unbound-method */
+import { getEnabledFeatures } from "@cryptkeeper/config";
+import { pushMessage } from "@cryptkeeper/controllers";
+import { setSelectedCommitment } from "@cryptkeeper/redux";
+import { IdentityService } from "@src/identity";
+import { SimpleStorage } from "@src/storage";
 import { bigintToHex } from "bigint-conversion";
 import { browser } from "webextension-polyfill-ts";
-import { ZERO_ADDRESS } from "@cryptkeeper/constants";
-import { CreateIdentityOptions, IdentityStrategy } from "@cryptkeeper/types";
-import { pushMessage } from "@cryptkeeper/controllers";
-import { getEnabledFeatures } from "@cryptkeeper/config";
-import { setSelectedCommitment } from "@cryptkeeper/redux";
-
-import { SimpleStorage } from "@src/storage";
-import { IdentityService } from "@src/identity";
 
 import { createNewIdentity } from "../factory";
 

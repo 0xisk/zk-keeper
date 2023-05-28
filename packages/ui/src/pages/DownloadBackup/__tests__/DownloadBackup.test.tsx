@@ -2,11 +2,10 @@
  * @jest-environment jsdom
  */
 
+import { downloadBackup, useAppDispatch } from "@cryptkeeper/redux";
+import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { act, render, waitFor, screen, fireEvent } from "@testing-library/react";
 import { useNavigate } from "react-router-dom";
-import { downloadBackup, useAppDispatch } from "@cryptkeeper/redux";
-
-import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 
 import DownloadBackup from "..";
 

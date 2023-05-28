@@ -2,9 +2,9 @@
  * @jest-environment jsdom
  */
 
+import { setupPassword, useAppDispatch } from "@cryptkeeper/redux";
 import { render, screen, fireEvent, act, waitFor } from "@testing-library/react";
 import { useNavigate } from "react-router-dom";
-import { setupPassword, useAppDispatch } from "@cryptkeeper/redux";
 
 import Onboarding from "..";
 

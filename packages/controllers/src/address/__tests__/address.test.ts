@@ -1,6 +1,6 @@
 import { ZERO_ADDRESS } from "@cryptkeeper/constants";
 
-import { sliceAddress, ellipsify } from "../";
+import { sliceAddress, ellipsify } from "..";
 
 describe("util/account", () => {
   test("should slice address and return short representation", () => {

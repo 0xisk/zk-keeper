@@ -1,5 +1,5 @@
-import { getApiKeys } from "../../env";
 import { getRpcUrls, getChainIds, getChains } from "..";
+import { getApiKeys } from "../../env";
 
 jest.mock("../../env", (): unknown => ({
   getApiKeys: jest.fn(),

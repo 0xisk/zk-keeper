@@ -1,7 +1,7 @@
+import { setStatus, setSelectedCommitment } from "@cryptkeeper/redux";
+import { InjectedMessageData, ReduxAction, SelectedIdentity } from "@cryptkeeper/types";
 import log from "loglevel";
 import { browser } from "webextension-polyfill-ts";
-import { InjectedMessageData, ReduxAction, SelectedIdentity } from "@cryptkeeper/types";
-import { setStatus, setSelectedCommitment } from "@cryptkeeper/redux";
 
 function injectScript() {
   const url = browser.runtime.getURL("js/injected.js");

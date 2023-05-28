@@ -1,7 +1,6 @@
-import { RLN, RLNFullProof } from "rlnjs";
-
-import { SemaphoreIdentity } from "@src/identity";
 import { RLNProofRequest } from "@cryptkeeper/types";
+import { SemaphoreIdentity } from "@src/identity";
+import { RLN, RLNFullProof } from "rlnjs";
 
 import { getMerkleProof, getRlnVerficationKeyJson } from "../utils";
 

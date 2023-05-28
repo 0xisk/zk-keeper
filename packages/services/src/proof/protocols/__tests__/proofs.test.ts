@@ -1,15 +1,14 @@
-import { Identity } from "@semaphore-protocol/identity";
-import { generateProof } from "@semaphore-protocol/proof";
-import { MerkleProof } from "@zk-kit/incremental-merkle-tree";
-import { RLN } from "rlnjs";
 import { ZERO_ADDRESS } from "@cryptkeeper/constants";
 import { IdentityMetadata, RLNProofRequest } from "@cryptkeeper/types";
-
+import { Identity } from "@semaphore-protocol/identity";
+import { generateProof } from "@semaphore-protocol/proof";
 import { SemaphoreIdentity } from "@src/identity";
+import { MerkleProof } from "@zk-kit/incremental-merkle-tree";
+import { RLN } from "rlnjs";
 
+import { getMerkleProof } from "../../utils";
 import { RLNProofService } from "../RLNProof";
 import { SemaphoreProofService } from "../SemaphoreProof";
-import { getMerkleProof } from "../../utils";
 
 jest.mock("rlnjs");
 

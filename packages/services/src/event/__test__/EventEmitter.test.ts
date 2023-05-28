@@ -1,7 +1,7 @@
-import { Events, EventHandler, EventName } from "../types";
 import { EventEmitter } from "..";
+import { Events, EventHandler, EventName } from "../types";
 
-let events: Events = {
+const events: Events = {
   identityChanged: () => false,
   login: () => false,
   logout: () => false,
@@ -22,20 +22,20 @@ jest.mock("nanoevents", (): unknown => ({
 
 describe("services/event", () => {
   test("Should be able to add new event listeners", () => {
-    let eventCondition: boolean = false;
+    let eventCondition = false;
     const eventHandler = (): boolean => (eventCondition = !eventCondition);
     const eventEmitter = new EventEmitter();
 
     eventEmitter.on("identityChanged", eventHandler);
     eventEmitter.emit("identityChanged");
     // TOOD: check if the evnetHandler function is called or not.
-    //const cbSpy = jest.spyOn(events, "identityChanged");
-    //expect(cbSpy).toHaveBeenCalledWith(eventCondition); => Gives error still
+    // const cbSpy = jest.spyOn(events, "identityChanged");
+    // expect(cbSpy).toHaveBeenCalledWith(eventCondition); => Gives error still
     expect(eventCondition).toBe(true);
   });
 
   test("Should be able to clear events listeners", () => {
-    let eventCondition: boolean = false;
+    let eventCondition = false;
     const eventHandler = (): boolean => (eventCondition = !eventCondition);
     const eventEmitter = new EventEmitter();
 

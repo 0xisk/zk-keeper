@@ -2,9 +2,9 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook, waitFor } from "@testing-library/react";
-import { RequestResolutionStatus } from "@cryptkeeper/types";
 import { useAppDispatch, finalizeRequest, usePendingRequests } from "@cryptkeeper/redux";
+import { RequestResolutionStatus } from "@cryptkeeper/types";
+import { act, renderHook, waitFor } from "@testing-library/react";
 
 import { IUseConfirmRequestModalData, useConfirmRequestModal } from "../useConfirmRequestModal";
 

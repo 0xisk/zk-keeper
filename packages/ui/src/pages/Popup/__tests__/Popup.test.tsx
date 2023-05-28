@@ -2,14 +2,13 @@
  * @jest-environment jsdom
  */
 
+import { Paths } from "@cryptkeeper/constants";
+import { createModalRoot, deleteModalRoot } from "@cryptkeeper/mocks";
+import { useAppDispatch, useAppSelector, usePendingRequests } from "@cryptkeeper/redux";
+import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { render, waitFor } from "@testing-library/react";
 import { Suspense } from "react";
 import { MemoryRouter } from "react-router-dom";
-import { createModalRoot, deleteModalRoot } from "@cryptkeeper/mocks";
-import { Paths } from "@cryptkeeper/constants";
-import { useAppDispatch, useAppSelector, usePendingRequests } from "@cryptkeeper/redux";
-
-import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 
 import Popup from "..";
 import { IUsePopupData, usePopup } from "../usePopup";

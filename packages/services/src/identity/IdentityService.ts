@@ -1,7 +1,7 @@
-import { bigintToHex } from "bigint-conversion";
-import { browser } from "webextension-polyfill-ts";
-import { BrowserController, pushMessage, ellipsify } from "@cryptkeeper/controllers";
 import { getEnabledFeatures } from "@cryptkeeper/config";
+import { Paths } from "@cryptkeeper/constants";
+import { BrowserController, pushMessage, ellipsify } from "@cryptkeeper/controllers";
+import { setIdentities, setSelectedCommitment } from "@cryptkeeper/redux";
 import {
   IdentityMetadata,
   IdentityName,
@@ -9,15 +9,15 @@ import {
   OperationType,
   SelectedIdentity,
 } from "@cryptkeeper/types";
-import { Paths } from "@cryptkeeper/constants";
-import { setIdentities, setSelectedCommitment } from "@cryptkeeper/redux";
-
 import { cryptoGenerateEncryptedHmac, cryptoGetAuthenticBackupCiphertext } from "@src/crypto";
 import { HistoryService } from "@src/history";
+import { SemaphoreIdentity } from "@src/identity/protocols";
 import { LockerService } from "@src/locker";
 import { NotificationService } from "@src/notification";
 import { SimpleStorage } from "@src/storage";
-import { SemaphoreIdentity } from "@src/identity/protocols";
+import { bigintToHex } from "bigint-conversion";
+import { browser } from "webextension-polyfill-ts";
+
 import type { IBackupable } from "@src/backup";
 
 import { createNewIdentity } from "./factory";

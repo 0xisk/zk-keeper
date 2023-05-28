@@ -1,6 +1,5 @@
-import { PendingRequestType, RequestResolutionStatus } from "@cryptkeeper/types";
 import { setPendingRequests } from "@cryptkeeper/redux";
-
+import { PendingRequestType, RequestResolutionStatus } from "@cryptkeeper/types";
 import { BrowserController, pushMessage } from "@src/browser";
 
 import { RequestController } from "..";

@@ -1,5 +1,3 @@
-import classNames from "classnames";
-import { useCallback } from "react";
 import {
   useAppDispatch,
   createIdentityRequest,
@@ -8,9 +6,11 @@ import {
   setIdentityName,
   useSelectedIdentity,
 } from "@cryptkeeper/redux";
-
-import { useWallet } from "@src/hooks/wallet";
 import { Icon } from "@src/components/Icon";
+import { useWallet } from "@src/hooks/wallet";
+import classNames from "classnames";
+import { useCallback } from "react";
+
 import { IdentityItem } from "./Item";
 
 import type { IdentityData } from "@cryptkeeper/types";

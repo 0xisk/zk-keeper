@@ -1,7 +1,6 @@
+import { ReduxAction } from "@cryptkeeper/types";
 import log from "loglevel";
 import { browser } from "webextension-polyfill-ts";
-
-import { ReduxAction } from "@cryptkeeper/types";
 
 export async function pushMessage(message: ReduxAction): Promise<void> {
   try {

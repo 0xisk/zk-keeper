@@ -1,16 +1,15 @@
-import { hexlify, toUtf8Bytes } from "ethers";
-import nacl from "tweetnacl";
-import util from "tweetnacl-util";
 import { InitializationStep } from "@cryptkeeper/types";
-
 import { cryptoGenerateEncryptedHmac, cryptoGetAuthenticBackupCiphertext } from "@src/crypto";
 import { LockerService } from "@src/locker";
 import { MiscStorageService } from "@src/misc";
 import { mnemonicToSeed } from "@src/mnemonic";
 import { SimpleStorage } from "@src/storage";
+import { hexlify, toUtf8Bytes } from "ethers";
+import nacl from "tweetnacl";
+import util from "tweetnacl-util";
 
-import type { IBackupable } from "@src/backup";
 import type { KeyPair } from "./types";
+import type { IBackupable } from "@src/backup";
 
 const KEY_STORAGE_DB_KEY = "@KEY-STORAGE@";
 

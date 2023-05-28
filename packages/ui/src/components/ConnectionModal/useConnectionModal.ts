@@ -1,5 +1,4 @@
-import { getLinkPreview } from "link-preview-js";
-import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { getLastActiveTabUrl } from "@cryptkeeper/controllers";
 import {
   useAppDispatch,
   fetchHostPermissions,
@@ -7,7 +6,8 @@ import {
   setHostPermissions,
   useHostPermission,
 } from "@cryptkeeper/redux";
-import { getLastActiveTabUrl } from "@cryptkeeper/controllers";
+import { getLinkPreview } from "link-preview-js";
+import { ChangeEvent, useCallback, useEffect, useState } from "react";
 
 export interface IUseConnectionModalArgs {
   refreshConnectionStatus: () => Promise<void>;

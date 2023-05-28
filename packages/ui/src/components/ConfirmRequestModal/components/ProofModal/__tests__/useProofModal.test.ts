@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook, waitFor } from "@testing-library/react";
 import { PendingRequestType } from "@cryptkeeper/types";
+import { act, renderHook, waitFor } from "@testing-library/react";
 
 import { IUseProofModalArgs, IUseProofModalData, useProofModal } from "../useProofModal";
 

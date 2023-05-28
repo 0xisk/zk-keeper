@@ -1,10 +1,9 @@
 /* eslint-disable no-param-reassign */
-import { createSlice } from "@reduxjs/toolkit";
-import deepEqual from "fast-deep-equal";
 import { RPCAction } from "@cryptkeeper/constants";
 import { postMessage } from "@cryptkeeper/controllers";
-
+import { createSlice } from "@reduxjs/toolkit";
 import { useAppSelector } from "@src/hooks";
+import deepEqual from "fast-deep-equal";
 
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { TypedThunk } from "@src/store";

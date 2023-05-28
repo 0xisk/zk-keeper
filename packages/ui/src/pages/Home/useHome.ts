@@ -1,11 +1,10 @@
+import { Chain } from "@cryptkeeper/config";
+import { getLastActiveTabUrl } from "@cryptkeeper/controllers";
+import { useAppDispatch, fetchHistory, fetchIdentities, useIdentities, checkHostApproval } from "@cryptkeeper/redux";
+import { IdentityData } from "@cryptkeeper/types";
+import { useWallet } from "@src/hooks/wallet";
 import BigNumber from "bignumber.js";
 import { useEffect, useCallback } from "react";
-import { Chain } from "@cryptkeeper/config";
-import { IdentityData } from "@cryptkeeper/types";
-import { useAppDispatch, fetchHistory, fetchIdentities, useIdentities, checkHostApproval } from "@cryptkeeper/redux";
-import { getLastActiveTabUrl } from "@cryptkeeper/controllers";
-
-import { useWallet } from "@src/hooks/wallet";
 
 export interface IUseHomeData {
   identities: IdentityData[];

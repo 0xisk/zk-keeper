@@ -1,7 +1,7 @@
-import logoSVG from "@src/static/icons/logo.svg";
 import { ButtonType, Button } from "@src/components/Button";
 import { Icon } from "@src/components/Icon";
 import { PasswordInput } from "@src/components/PasswordInput";
+import logoSVG from "@src/static/icons/logo.svg";
 
 import "./onboarding.scss";
 import { useOnboarding } from "./useOnboarding";

@@ -1,6 +1,4 @@
-import { Navigate, RouteObject, useRoutes } from "react-router-dom";
 import { Paths } from "@cryptkeeper/constants";
-
 import ConfirmRequestModal from "@src/components/ConfirmRequestModal";
 import CreateIdentity from "@src/pages/CreateIdentity";
 import DownloadBackup from "@src/pages/DownloadBackup";
@@ -9,6 +7,7 @@ import Login from "@src/pages/Login";
 import Mnemonic from "@src/pages/Mnemonic";
 import Onboarding from "@src/pages/Onboarding";
 import Settings from "@src/pages/Settings";
+import { Navigate, RouteObject, useRoutes } from "react-router-dom";
 
 import "../../styles.scss";
 

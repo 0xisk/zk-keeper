@@ -1,6 +1,5 @@
-import classNames from "classnames";
-
 import { Header } from "@src/components/Header";
+import classNames from "classnames";
 
 import { IdentityList, TabList, Info, ActivityList } from "./components";
 import "./home.scss";

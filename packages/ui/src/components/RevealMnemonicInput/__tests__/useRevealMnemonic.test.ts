@@ -2,10 +2,9 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook } from "@testing-library/react";
-
-import { IUseTimeoutData, useTimeout } from "@src/hooks/timeout";
 import { copyToClipboard, downloadFile } from "@cryptkeeper/controllers";
+import { IUseTimeoutData, useTimeout } from "@src/hooks/timeout";
+import { act, renderHook } from "@testing-library/react";
 
 import { IUseRevealMnemonicArgs, useRevealMnemonic } from "../useRevealMnemonic";
 

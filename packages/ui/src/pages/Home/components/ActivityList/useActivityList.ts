@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useState } from "react";
-import { Operation } from "@cryptkeeper/types";
 import { useAppDispatch, deleteHistoryOperation, fetchHistory, useIdentityOperations } from "@cryptkeeper/redux";
+import { Operation } from "@cryptkeeper/types";
+import { useCallback, useEffect, useState } from "react";
 
 export interface IUseActivityListData {
   isLoading: boolean;

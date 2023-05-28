@@ -1,7 +1,6 @@
-import log from "loglevel";
-
 import { isDebugMode } from "@cryptkeeper/config";
 import { initializeInjectedProvider } from "@cryptkeeper/providers";
+import log from "loglevel";
 
 log.setDefaultLevel(isDebugMode() ? "debug" : "info");
 

@@ -2,17 +2,16 @@
  * @jest-environment jsdom
  */
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faTwitter, faGithub, faReddit } from "@fortawesome/free-brands-svg-icons";
-import { act, fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { useNavigate } from "react-router-dom";
-import selectEvent from "react-select-event";
 import { ZERO_ADDRESS, IDENTITY_TYPES, WEB2_PROVIDER_OPTIONS } from "@cryptkeeper/constants";
 import { createModalRoot, deleteModalRoot } from "@cryptkeeper/mocks";
 import { useAppDispatch, createIdentity } from "@cryptkeeper/redux";
-
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faTwitter, faGithub, faReddit } from "@fortawesome/free-brands-svg-icons";
 import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { signIdentityMessage } from "@src/services/identity";
+import { act, fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { useNavigate } from "react-router-dom";
+import selectEvent from "react-select-event";
 
 import CreateIdentity from "..";
 

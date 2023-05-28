@@ -2,10 +2,10 @@
  * @jest-environment jsdom
  */
 
+import { ZERO_ADDRESS } from "@cryptkeeper/constants";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { act, render, screen, fireEvent } from "@testing-library/react";
-import { ZERO_ADDRESS } from "@cryptkeeper/constants";
 
 import { IdentityItem, IdentityItemProps } from "../Item";
 

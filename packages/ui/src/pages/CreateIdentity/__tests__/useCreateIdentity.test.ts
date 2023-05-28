@@ -2,14 +2,12 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook } from "@testing-library/react";
-import { useNavigate } from "react-router-dom";
 import { ZERO_ADDRESS, IDENTITY_TYPES, Paths } from "@cryptkeeper/constants";
-
 import { useAppDispatch, createIdentity } from "@cryptkeeper/redux";
-
 import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { signIdentityMessage } from "@src/services/identity";
+import { act, renderHook } from "@testing-library/react";
+import { useNavigate } from "react-router-dom";
 
 import { useCreateIdentity } from "../useCreateIdentity";
 

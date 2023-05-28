@@ -1,6 +1,6 @@
-import { Identity } from "@semaphore-protocol/identity";
 import { ZERO_ADDRESS } from "@cryptkeeper/constants";
 import { IdentityMetadata } from "@cryptkeeper/types";
+import { Identity } from "@semaphore-protocol/identity";
 
 import { SemaphoreIdentity } from "..";
 

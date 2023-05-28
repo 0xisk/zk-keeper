@@ -1,3 +1,4 @@
+// TODO: should we move those consts to @cryptkeeper/constants better?
 export const CRYPT_KEEPER_PASSWORD = process.env.CRYPT_KEEPER_PASSWORD || "123456Qq@";
 export const METAMASK_PASSWORD = process.env.METAMASK_PASSWORD || "123456Qq@";
 export const METAMASK_SEED_PHRASE =

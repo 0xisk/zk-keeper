@@ -1,11 +1,12 @@
 {
   "name": "crypt-keeper-extension",
+  "private": true,
   "version": "1.0.0",
   "description": "Crypt-Keeper Extension, zero knowledge identity management and proof generation tool",
   "main": "index.js",
   "packageManager": "pnpm@7.30.3",
   "scripts": {
-    "build:packages": "pnpm run --parallel --filter \"{packages}^...\" build:ts",
+    "build:packages": "pnpm run --parallel --filter {packages} build:ts",
     "build": "env-cmd --silent -f .env cross-env NODE_ENV=production webpack --config webpack.prod.js --mode=production",
     "dev": "env-cmd --silent -f .env cross-env NODE_ENV=development webpack --config webpack.dev.js --mode=development",
     "dev:chrome": "cross-env TARGET=chrome npm run dev",

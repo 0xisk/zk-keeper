@@ -1,10 +1,10 @@
+import { Chain, getChains } from "@cryptkeeper/config";
+import { ConnectorNames, getConnectorName } from "@cryptkeeper/connectors";
+import { useAppDispatch, useAppStatus, getWalletConnection, setWalletConnection, lock } from "@cryptkeeper/redux";
 import { useWeb3React } from "@web3-react/core";
 import BigNumber from "bignumber.js";
 import { formatUnits } from "ethers";
 import { useCallback, useEffect, useState } from "react";
-import { Chain, getChains } from "@cryptkeeper/config";
-import { ConnectorNames, getConnectorName } from "@cryptkeeper/connectors";
-import { useAppDispatch, useAppStatus, getWalletConnection, setWalletConnection, lock } from "@cryptkeeper/redux";
 
 import type { Connector } from "@web3-react/types";
 import type { BrowserProvider } from "ethers/types/providers";

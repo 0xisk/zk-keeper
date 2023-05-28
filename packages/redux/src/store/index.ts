@@ -1,12 +1,11 @@
-import { AnyAction, configureStore, ThunkDispatch, ThunkAction } from "@reduxjs/toolkit";
-import { createLogger } from "redux-logger";
-import thunk from "redux-thunk";
 import { isDebugMode } from "@cryptkeeper/config";
-
+import { AnyAction, configureStore, ThunkDispatch, ThunkAction } from "@reduxjs/toolkit";
 import { app } from "@src/ducks/app";
 import { identities } from "@src/ducks/identities";
-import { requests } from "@src/ducks/requests";
 import { permissions } from "@src/ducks/permissions";
+import { requests } from "@src/ducks/requests";
+import { createLogger } from "redux-logger";
+import thunk from "redux-thunk";
 
 const rootReducer = {
   identities,

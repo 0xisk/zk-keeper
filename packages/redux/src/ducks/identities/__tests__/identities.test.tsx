@@ -2,13 +2,13 @@
  * @jest-environment jsdom
  */
 
+import { RPCAction, ZERO_ADDRESS } from "@cryptkeeper/constants";
+import { postMessage } from "@cryptkeeper/controllers";
+import { HistorySettings, OperationType, SelectedIdentity } from "@cryptkeeper/types";
+import { store } from "@src/store";
 import { renderHook } from "@testing-library/react";
 import { Provider } from "react-redux";
-import { RPCAction, ZERO_ADDRESS } from "@cryptkeeper/constants";
-import { HistorySettings, OperationType, SelectedIdentity } from "@cryptkeeper/types";
-import { postMessage } from "@cryptkeeper/controllers";
 
-import { store } from "@src/store";
 import {
   createIdentityRequest,
   createIdentity,

@@ -1,13 +1,12 @@
+import { getEnabledFeatures } from "@cryptkeeper/config";
+import { WEB2_PROVIDER_OPTIONS, IDENTITY_TYPES, Paths } from "@cryptkeeper/constants";
+import { closePopup, useAppDispatch, createIdentity } from "@cryptkeeper/redux";
+import { IdentityStrategy, IdentityWeb2Provider, SelectOption } from "@cryptkeeper/types";
+import { useWallet } from "@src/hooks/wallet";
+import { signIdentityMessage } from "@src/services/identity";
 import { BaseSyntheticEvent, useCallback } from "react";
 import { Control, useForm, UseFormRegister } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { getEnabledFeatures } from "@cryptkeeper/config";
-import { WEB2_PROVIDER_OPTIONS, IDENTITY_TYPES, Paths } from "@cryptkeeper/constants";
-import { IdentityStrategy, IdentityWeb2Provider, SelectOption } from "@cryptkeeper/types";
-import { closePopup, useAppDispatch, createIdentity } from "@cryptkeeper/redux";
-
-import { useWallet } from "@src/hooks/wallet";
-import { signIdentityMessage } from "@src/services/identity";
 
 export interface IUseCreateIdentityData {
   isLoading: boolean;

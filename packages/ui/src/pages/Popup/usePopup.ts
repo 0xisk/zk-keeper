@@ -1,6 +1,3 @@
-import log from "loglevel";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Paths } from "@cryptkeeper/constants";
 import {
   fetchStatus,
@@ -9,8 +6,10 @@ import {
   usePendingRequests,
   useAppDispatch,
 } from "@cryptkeeper/redux";
-
 import { useWallet } from "@src/hooks/wallet";
+import log from "loglevel";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export interface IUsePopupData {
   isLoading: boolean;

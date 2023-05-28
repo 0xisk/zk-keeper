@@ -39,7 +39,7 @@ module.exports = {
       typescript: {},
       node: {
         extensions: [".ts", ".tsx", ".js", ".jsx"],
-        moduleDirectory: ["node_modules", "src", "e2e"],
+        moduleDirectory: ["node_modules", "packages"],
       },
     },
   },

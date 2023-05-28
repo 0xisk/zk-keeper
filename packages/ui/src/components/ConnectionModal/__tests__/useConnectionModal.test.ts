@@ -2,8 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook, waitFor } from "@testing-library/react";
-import { ChangeEvent } from "react";
+import { getLastActiveTabUrl } from "@cryptkeeper/controllers";
 import {
   useAppDispatch,
   fetchHostPermissions,
@@ -11,7 +10,8 @@ import {
   setHostPermissions,
   useHostPermission,
 } from "@cryptkeeper/redux";
-import { getLastActiveTabUrl } from "@cryptkeeper/controllers";
+import { act, renderHook, waitFor } from "@testing-library/react";
+import { ChangeEvent } from "react";
 
 import { IUseConnectionModalArgs, IUseConnectionModalData, useConnectionModal } from "../useConnectionModal";
 

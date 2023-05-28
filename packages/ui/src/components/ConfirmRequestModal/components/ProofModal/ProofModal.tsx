@@ -1,5 +1,4 @@
 import { PendingRequest, ZKProofPayload } from "@cryptkeeper/types";
-
 import { ButtonType, Button } from "@src/components/Button";
 import { FullModal, FullModalContent, FullModalFooter, FullModalHeader } from "@src/components/FullModal";
 import { Icon } from "@src/components/Icon";

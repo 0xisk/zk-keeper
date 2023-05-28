@@ -1,11 +1,10 @@
+import { downloadFile } from "@cryptkeeper/controllers";
+import { downloadBackup, useAppDispatch } from "@cryptkeeper/redux";
+import { PasswordFormFields } from "@cryptkeeper/types";
+import { formatDate } from "@src/util/date";
 import { BaseSyntheticEvent, useCallback, useState } from "react";
 import { UseFormRegister, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { downloadFile } from "@cryptkeeper/controllers";
-import { PasswordFormFields } from "@cryptkeeper/types";
-import { downloadBackup, useAppDispatch } from "@cryptkeeper/redux";
-
-import { formatDate } from "@src/util/date";
 
 export interface IUseDownloadBackupData {
   isLoading: boolean;

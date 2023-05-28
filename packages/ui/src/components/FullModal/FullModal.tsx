@@ -1,7 +1,6 @@
+import { Modal } from "@src/components/Modal";
 import classNames from "classnames";
 import { ReactNode } from "react";
-
-import { Modal } from "@src/components/Modal";
 
 import "./fullModal.scss";
 

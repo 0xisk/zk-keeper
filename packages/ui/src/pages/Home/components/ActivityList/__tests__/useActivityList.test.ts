@@ -2,9 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook, waitFor } from "@testing-library/react";
 import { ZERO_ADDRESS } from "@cryptkeeper/constants";
-import { HistorySettings, Operation, OperationType } from "@cryptkeeper/types";
 import {
   useAppDispatch,
   deleteHistoryOperation,
@@ -12,6 +10,8 @@ import {
   useHistorySettings,
   useIdentityOperations,
 } from "@cryptkeeper/redux";
+import { HistorySettings, Operation, OperationType } from "@cryptkeeper/types";
+import { act, renderHook, waitFor } from "@testing-library/react";
 
 import { useActivityList } from "../useActivityList";
 

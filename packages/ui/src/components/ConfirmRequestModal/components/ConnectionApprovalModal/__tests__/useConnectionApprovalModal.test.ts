@@ -2,9 +2,9 @@
  * @jest-environment jsdom
  */
 
-import { act, renderHook, waitFor } from "@testing-library/react";
-import { PendingRequestType } from "@cryptkeeper/types";
 import { useAppDispatch, fetchHostPermissions, setHostPermissions, useHostPermission } from "@cryptkeeper/redux";
+import { PendingRequestType } from "@cryptkeeper/types";
+import { act, renderHook, waitFor } from "@testing-library/react";
 
 import type { ChangeEvent } from "react";
 

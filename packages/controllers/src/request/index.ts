@@ -1,13 +1,12 @@
-import { EventEmitter2 } from "eventemitter2";
+import { setPendingRequests } from "@cryptkeeper/redux";
 import {
   PendingRequest,
   PendingRequestType,
   RequestResolutionAction,
   RequestResolutionStatus,
 } from "@cryptkeeper/types";
-import { setPendingRequests } from "@cryptkeeper/redux";
-
 import { BrowserController, pushMessage } from "@src/browser";
+import { EventEmitter2 } from "eventemitter2";
 
 export class RequestController extends EventEmitter2 {
   private browserService: BrowserController;

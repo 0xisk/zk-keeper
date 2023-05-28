@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
-import { useState, useEffect, useCallback } from "react";
 import { RLN } from "rlnjs";
-import { bigintToHex } from "bigint-conversion";
 import { Identity } from "@semaphore-protocol/identity";
+import { bigintToHex } from "bigint-conversion";
 import { encodeBytes32String } from "ethers";
+import { useState, useEffect, useCallback } from "react";
 import { toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
+
 import { CryptKeeperInjectedProvider, SelectedIdentity } from "./types";
 
 const SERVER_URL = "http://localhost:8090";

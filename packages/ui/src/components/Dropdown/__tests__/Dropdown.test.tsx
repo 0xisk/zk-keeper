@@ -2,12 +2,11 @@
  * @jest-environment jsdom
  */
 
+import { WEB2_PROVIDER_OPTIONS } from "@cryptkeeper/constants";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTwitter, faGithub, faReddit } from "@fortawesome/free-brands-svg-icons";
 import { render, screen } from "@testing-library/react";
 import selectEvent from "react-select-event";
-
-import { WEB2_PROVIDER_OPTIONS } from "@cryptkeeper/constants";
 
 import { Dropdown, DropdownProps } from "..";
 

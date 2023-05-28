@@ -2,9 +2,6 @@
  * @jest-environment jsdom
  */
 
-import { renderHook, waitFor } from "@testing-library/react";
-import log from "loglevel";
-import { useNavigate } from "react-router-dom";
 import { Paths } from "@cryptkeeper/constants";
 import {
   fetchStatus,
@@ -13,8 +10,10 @@ import {
   usePendingRequests,
   useAppDispatch,
 } from "@cryptkeeper/redux";
-
 import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
+import { renderHook, waitFor } from "@testing-library/react";
+import log from "loglevel";
+import { useNavigate } from "react-router-dom";
 
 import { IUsePopupData, usePopup } from "../usePopup";
 

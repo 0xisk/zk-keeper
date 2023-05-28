@@ -1,9 +1,9 @@
+import { MockConnector } from "@cryptkeeper/mocks";
 import { MetaMask, MetaMaskConstructorArgs } from "@web3-react/metamask";
 
 import type { Actions, Connector } from "@web3-react/types";
 
 import { getConnectorName, ConnectorNames } from "..";
-import { MockConnector } from "@cryptkeeper/mocks";
 
 describe("connectors/utils", () => {
   test("should return proper connector name", () => {

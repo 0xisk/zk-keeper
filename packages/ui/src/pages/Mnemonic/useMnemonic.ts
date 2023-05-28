@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { generateMnemonic } from "@cryptkeeper/services";
 import { Paths } from "@cryptkeeper/constants";
 import { saveMnemonic, useAppStatus, useAppDispatch } from "@cryptkeeper/redux";
+import { generateMnemonic } from "@cryptkeeper/services";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export interface IUseMnemonicData {
   isLoading: boolean;

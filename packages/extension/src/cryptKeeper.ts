@@ -1,13 +1,4 @@
-import log from "loglevel";
-import { browser } from "webextension-polyfill-ts";
 import { RPCAction } from "@cryptkeeper/constants";
-import {
-  PendingRequestType,
-  RLNProofRequest,
-  SemaphoreProofRequest,
-  BackupableServices,
-  Approvals,
-} from "@cryptkeeper/types";
 import { BrowserController, HandlerController, RequestController } from "@cryptkeeper/controllers";
 import {
   ApprovalService,
@@ -19,6 +10,15 @@ import {
   IdentityService,
   validateZkInputs,
 } from "@cryptkeeper/services";
+import {
+  PendingRequestType,
+  RLNProofRequest,
+  SemaphoreProofRequest,
+  BackupableServices,
+  Approvals,
+} from "@cryptkeeper/types";
+import log from "loglevel";
+import { browser } from "webextension-polyfill-ts";
 
 export default class CryptKeeperController extends HandlerController {
   private identityService: IdentityService;

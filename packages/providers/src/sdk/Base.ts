@@ -1,8 +1,5 @@
-import { MerkleProof } from "@zk-kit/incremental-merkle-tree";
-import log from "loglevel";
-
-import { EventEmitter, SemaphoreIdentity, ProofService } from "@cryptkeeper/services";
 import { RPCAction } from "@cryptkeeper/constants";
+import { EventEmitter, SemaphoreIdentity, ProofService } from "@cryptkeeper/services";
 import {
   Approvals,
   IRlnGenerateArgs,
@@ -14,6 +11,8 @@ import {
   SelectedIdentity,
   SemaphoreProof,
 } from "@cryptkeeper/types";
+import { MerkleProof } from "@zk-kit/incremental-merkle-tree";
+import log from "loglevel";
 
 const promises: {
   [k: string]: {

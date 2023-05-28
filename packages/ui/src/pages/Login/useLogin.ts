@@ -1,9 +1,9 @@
+import { Paths } from "@cryptkeeper/constants";
+import { unlock, useAppDispatch } from "@cryptkeeper/redux";
+import { PasswordFormFields } from "@cryptkeeper/types";
 import { BaseSyntheticEvent, useCallback, useState } from "react";
 import { UseFormRegister, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { Paths } from "@cryptkeeper/constants";
-import { PasswordFormFields } from "@cryptkeeper/types";
-import { unlock, useAppDispatch } from "@cryptkeeper/redux";
 
 export interface IUseLoginData {
   isLoading: boolean;

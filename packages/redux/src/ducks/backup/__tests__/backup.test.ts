@@ -4,8 +4,8 @@
 
 import { RPCAction } from "@cryptkeeper/constants";
 import { postMessage } from "@cryptkeeper/controllers";
-
 import { store } from "@src/store";
+
 import { downloadBackup } from "..";
 
 // TODO: solve jest import issue

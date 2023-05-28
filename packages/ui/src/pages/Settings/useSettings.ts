@@ -1,7 +1,4 @@
-import { useCallback, useEffect, useState, SyntheticEvent } from "react";
-import { useNavigate } from "react-router-dom";
 import { Paths } from "@cryptkeeper/constants";
-import { HistorySettings } from "@cryptkeeper/types";
 import {
   useAppDispatch,
   clearHistory,
@@ -10,6 +7,9 @@ import {
   fetchHistory,
   useHistorySettings,
 } from "@cryptkeeper/redux";
+import { HistorySettings } from "@cryptkeeper/types";
+import { useCallback, useEffect, useState, SyntheticEvent } from "react";
+import { useNavigate } from "react-router-dom";
 
 export interface IUseSettingsData {
   isLoading: boolean;
