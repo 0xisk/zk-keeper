@@ -15,7 +15,7 @@ jest.mock("react-router-dom", () => ({
   useNavigate: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 

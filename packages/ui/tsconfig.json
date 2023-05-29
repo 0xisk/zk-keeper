@@ -3,11 +3,10 @@
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist/src/",
-    "paths": {
-      "@src/*": ["./src/*"]
-    },
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+
     // Modules
-    "typeRoots": ["./node_modules/@types", "custom.d.ts"]
+    "typeRoots": ["./node_modules/@types", "./src/custom.d.ts"]
   },
   "include": ["src"],
   "references": [

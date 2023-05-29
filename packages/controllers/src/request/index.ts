@@ -5,8 +5,9 @@ import {
   RequestResolutionAction,
   RequestResolutionStatus,
 } from "@cryptkeeper/types";
-import { BrowserController, pushMessage } from "@src/browser";
 import { EventEmitter2 } from "eventemitter2";
+
+import { BrowserController, pushMessage } from "../browser";
 
 export class RequestController extends EventEmitter2 {
   private browserService: BrowserController;

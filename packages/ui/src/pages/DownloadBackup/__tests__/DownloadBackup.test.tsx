@@ -3,25 +3,25 @@
  */
 
 import { downloadBackup, useAppDispatch } from "@cryptkeeper/redux";
-import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { act, render, waitFor, screen, fireEvent } from "@testing-library/react";
 import { useNavigate } from "react-router-dom";
 
 import DownloadBackup from "..";
+import { useWallet, defaultWalletHookData } from "../../../hooks/wallet";
 
 jest.mock("react-router-dom", () => ({
   useNavigate: jest.fn(),
 }));
 
-jest.mock("@src/ui/hooks/wallet", (): unknown => ({
+jest.mock("../ui/hooks/wallet", (): unknown => ({
   useWallet: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/backup", (): unknown => ({
+jest.mock("../ui/ducks/backup", (): unknown => ({
   downloadBackup: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 

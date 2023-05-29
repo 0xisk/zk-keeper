@@ -4,9 +4,9 @@
 
 import { RPCAction } from "@cryptkeeper/constants";
 import { postMessage } from "@cryptkeeper/controllers";
-import { store } from "@src/store";
 
 import { downloadBackup } from "..";
+import { store } from "../../../store";
 
 // TODO: solve jest import issue
 jest.mock("@src/util/postMessage");

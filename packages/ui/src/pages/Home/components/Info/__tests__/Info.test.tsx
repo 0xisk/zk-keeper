@@ -4,13 +4,16 @@
 
 import { sliceAddress } from "@cryptkeeper/controllers";
 import { createModalRoot, deleteModalRoot } from "@cryptkeeper/mocks";
-import { IUseConnectionModalData, useConnectionModal } from "@src/components/ConnectionModal/useConnectionModal";
-import { defaultWalletHookData } from "@src/hooks";
 import { act, render, screen } from "@testing-library/react";
 
 import { Info, InfoProps } from "..";
+import {
+  IUseConnectionModalData,
+  useConnectionModal,
+} from "../../../../../components/ConnectionModal/useConnectionModal";
+import { defaultWalletHookData } from "../../../../../hooks";
 
-jest.mock("@src/ui/components/ConnectionModal/useConnectionModal", (): unknown => ({
+jest.mock("../ui/components/ConnectionModal/useConnectionModal", (): unknown => ({
   useConnectionModal: jest.fn(),
 }));
 

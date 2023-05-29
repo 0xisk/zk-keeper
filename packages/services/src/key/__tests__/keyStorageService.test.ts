@@ -1,6 +1,5 @@
-import { SimpleStorage } from "@src/storage";
-
 import { KeyStorageService } from "..";
+import { SimpleStorage } from "../../storage";
 
 const mockSerializedKeys = JSON.stringify({
   publicKey: "O2onvM62pC1io6jQKm8Nc2UyFXcd4kOmOsBIoYtZ2ik=",
@@ -11,7 +10,7 @@ const mockAuthenticityCheckData = {
   isNewOnboarding: true,
 };
 
-jest.mock("@src/lock", (): unknown => ({
+jest.mock("../../lock", (): unknown => ({
   getInstance: jest.fn(() => ({
     encrypt: jest.fn(() => mockSerializedKeys),
     decrypt: jest.fn(() => mockSerializedKeys),
@@ -19,19 +18,19 @@ jest.mock("@src/lock", (): unknown => ({
   })),
 }));
 
-jest.mock("@src/misc", (): unknown => ({
-  ...jest.requireActual("@src/background/services/misc"),
+jest.mock("../../misc", (): unknown => ({
+  ...jest.requireActual("../background/services/misc"),
   getInstance: jest.fn(() => ({
     setInitialization: jest.fn(),
   })),
 }));
 
-jest.mock("@src/crypto", (): unknown => ({
+jest.mock("../../crypto", (): unknown => ({
   cryptoGenerateEncryptedHmac: jest.fn(() => "encrypted"),
   cryptoGetAuthenticBackupCiphertext: jest.fn(() => "encrypted"),
 }));
 
-jest.mock("@src/storage");
+jest.mock("../../storage");
 
 type MockStorage = { get: jest.Mock; set: jest.Mock; clear: jest.Mock };
 

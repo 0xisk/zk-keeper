@@ -1,11 +1,14 @@
 {
   "name": "@cryptkeeper/demo",
-  "private": "true",
+  "private": true,
+  "type": "module",
   "version": "0.1.0",
   "scripts": {
     "start": "parcel serve --no-cache index.html"
   },
   "dependencies": {
+    "@semaphore-protocol/identity": "^3.10.1",
+    "bigint-conversion": "^2.4.1",
     "ethers": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

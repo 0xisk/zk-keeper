@@ -1,9 +1,9 @@
 import { InitializationStep } from "@cryptkeeper/types";
-import { SimpleStorage } from "@src/storage";
 
 import { MiscStorageService } from "..";
+import { SimpleStorage } from "../../storage";
 
-jest.mock("@src/storage");
+jest.mock("../../storage");
 
 type MockStorage = { get: jest.Mock; set: jest.Mock };
 

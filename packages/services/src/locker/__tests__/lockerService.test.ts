@@ -2,11 +2,11 @@
 import { pushMessage } from "@cryptkeeper/controllers";
 import { setStatus } from "@cryptkeeper/redux";
 import { InitializationStep } from "@cryptkeeper/types";
-import { cryptoDecrypt } from "@src/crypto";
-import { SimpleStorage } from "@src/storage";
 import { browser } from "webextension-polyfill-ts";
 
 import { LockerService } from "..";
+import { cryptoDecrypt } from "../../crypto";
+import { SimpleStorage } from "../../storage";
 
 const defaultPassword = "password";
 const passwordChecker = "Password is correct";
@@ -19,22 +19,22 @@ jest.mock("crypto-js", (): unknown => ({
   },
 }));
 
-jest.mock("@src/crypto", (): unknown => ({
+jest.mock("../../crypto", (): unknown => ({
   cryptoEncrypt: jest.fn(() => defaultPassword),
   cryptoDecrypt: jest.fn(() => passwordChecker),
   cryptoGenerateEncryptedHmac: jest.fn(() => "encrypted"),
   cryptoGetAuthenticBackupCiphertext: jest.fn(() => "encrypted"),
 }));
 
-jest.mock("@src/misc", (): unknown => ({
-  ...jest.requireActual("@src/misc"),
+jest.mock("../../misc", (): unknown => ({
+  ...jest.requireActual("../misc"),
   getInstance: jest.fn(() => ({
     getInitialization: jest.fn(() => InitializationStep.MNEMONIC),
     setInitialization: jest.fn(),
   })),
 }));
 
-jest.mock("@src/storage");
+jest.mock("../../storage");
 
 // TODO: refactor jest import
 jest.mock("@cryptkeeper/controllers/browser");

@@ -1,11 +1,10 @@
 /* eslint-disable no-console */
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { useCryptKeeper } from "./useCryptKeeper";
-
-import "react-toastify/dist/ReactToastify.css";
 
 interface INotConnectedProps {
   onClick: () => void;
@@ -51,15 +50,11 @@ const App = () => {
     <div>
       <div>
         <h2>Semaphore</h2>
-
         <button onClick={() => genSemaphoreProof(MerkleProofType.STORAGE_ADDRESS)}>
           Generate proof from Merkle proof storage address
         </button>{" "}
-
         <br />
-
         <br />
-
         <button onClick={() => genSemaphoreProof(MerkleProofType.ARTIFACTS)}>
           Generate proof from Merkle proof artifacts
         </button>
@@ -69,15 +64,11 @@ const App = () => {
 
       <div>
         <h2>RLN</h2>
-
         <button onClick={() => genRLNProof(MerkleProofType.STORAGE_ADDRESS)}>
           Generate proof from Merkle proof storage address
         </button>{" "}
-
         <br />
-
         <br />
-
         <button onClick={() => genRLNProof(MerkleProofType.ARTIFACTS)}>
           Generate proof from Merkle proof artifacts
         </button>
@@ -87,9 +78,7 @@ const App = () => {
 
       <div>
         <h2>Get Identity Commitment</h2>
-
         <button onClick={() => getIdentityCommitment()}>Get</button> <br />
-
         <br />
       </div>
 
@@ -97,9 +86,7 @@ const App = () => {
 
       <div>
         <h2>Create a new Identity</h2>
-
         <button onClick={createIdentity}>Create</button> <br />
-
         <br />
       </div>
 

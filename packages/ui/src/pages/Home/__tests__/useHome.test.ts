@@ -5,10 +5,10 @@
 import { getLastActiveTabUrl } from "@cryptkeeper/controllers";
 import { useAppDispatch, useIdentities, fetchIdentities, fetchHistory, checkHostApproval } from "@cryptkeeper/redux";
 import { IdentityData } from "@cryptkeeper/types";
-import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { act, renderHook } from "@testing-library/react";
 import { useRef } from "react";
 
+import { useWallet, defaultWalletHookData } from "../../../hooks/wallet";
 import { useHome } from "../useHome";
 
 jest.mock("react", (): unknown => ({
@@ -16,21 +16,21 @@ jest.mock("react", (): unknown => ({
   useRef: jest.fn(),
 }));
 
-jest.mock("@src/ui/hooks/wallet", (): unknown => ({
+jest.mock("../ui/hooks/wallet", (): unknown => ({
   useWallet: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/identities", (): unknown => ({
+jest.mock("../ui/ducks/identities", (): unknown => ({
   fetchIdentities: jest.fn(),
   fetchHistory: jest.fn(),
   useIdentities: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/permissions", (): unknown => ({
+jest.mock("../ui/ducks/permissions", (): unknown => ({
   checkHostApproval: jest.fn(),
 }));
 

@@ -1,13 +1,13 @@
+import { isDebugMode } from "@cryptkeeper/config";
+import { RequestHandler } from "@cryptkeeper/types";
 import log from "loglevel";
 import "subworkers";
 import { browser } from "webextension-polyfill-ts";
-import { isDebugMode } from "@cryptkeeper/config";
-import { RequestHandler } from "@cryptkeeper/types";
 
-import CryptKeeperController from "./cryptKeeper";
-import { deferredPromise } from "./shared/utils";
 import "./appInit";
+import CryptKeeperController from "./cryptKeeper";
 import "./shared/initGlobals";
+import { deferredPromise } from "./shared/utils";
 
 log.setDefaultLevel(isDebugMode() ? "debug" : "info");
 

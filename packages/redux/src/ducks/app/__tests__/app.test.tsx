@@ -3,7 +3,6 @@
  */
 import { RPCAction } from "@cryptkeeper/constants";
 import { postMessage } from "@cryptkeeper/controllers";
-import { store } from "@src/store";
 import { renderHook } from "@testing-library/react";
 import { Provider } from "react-redux";
 
@@ -19,6 +18,7 @@ import {
   unlock,
   useAppStatus,
 } from "..";
+import { store } from "../../../store";
 
 jest.mock("redux-logger", (): unknown => ({
   createLogger: () => () => (action: unknown) => action,
@@ -29,7 +29,7 @@ jest.mock("@cryptkeeper/config", (): unknown => ({
   isDebugMode: () => true,
 }));
 
-jest.unmock("@src/ducks/hooks");
+jest.unmock("../../../ducks/hooks");
 
 describe("ducks/app", () => {
   afterEach(() => {

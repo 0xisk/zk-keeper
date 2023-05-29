@@ -1,7 +1,8 @@
-import { Icon } from "@src/components/Icon";
-import loaderSvg from "@src/static/icons/loader.svg";
 import classNames from "classnames";
 import { ButtonHTMLAttributes } from "react";
+
+import { Icon } from "../Icon";
+import loaderSvg from "../static/icons/loader.svg";
 
 import "./button.scss";
 

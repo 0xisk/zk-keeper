@@ -9,18 +9,19 @@ import {
   OperationType,
   SelectedIdentity,
 } from "@cryptkeeper/types";
-import { cryptoGenerateEncryptedHmac, cryptoGetAuthenticBackupCiphertext } from "@src/crypto";
-import { HistoryService } from "@src/history";
-import { SemaphoreIdentity } from "@src/identity/protocols";
-import { LockerService } from "@src/locker";
-import { NotificationService } from "@src/notification";
-import { SimpleStorage } from "@src/storage";
 import { bigintToHex } from "bigint-conversion";
 import { browser } from "webextension-polyfill-ts";
 
-import type { IBackupable } from "@src/backup";
+import type { IBackupable } from "../backup";
+
+import { cryptoGenerateEncryptedHmac, cryptoGetAuthenticBackupCiphertext } from "../crypto";
+import { HistoryService } from "../history";
+import { LockerService } from "../locker";
+import { NotificationService } from "../notification";
+import { SimpleStorage } from "../storage";
 
 import { createNewIdentity } from "./factory";
+import { SemaphoreIdentity } from "./protocols";
 
 const IDENTITY_KEY = "@@ID@@";
 const ACTIVE_IDENTITY_KEY = "@@AID@@";

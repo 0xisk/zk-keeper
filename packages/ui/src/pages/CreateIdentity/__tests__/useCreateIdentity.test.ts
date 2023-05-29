@@ -4,34 +4,34 @@
 
 import { ZERO_ADDRESS, IDENTITY_TYPES, Paths } from "@cryptkeeper/constants";
 import { useAppDispatch, createIdentity } from "@cryptkeeper/redux";
-import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
-import { signIdentityMessage } from "@src/services/identity";
 import { act, renderHook } from "@testing-library/react";
 import { useNavigate } from "react-router-dom";
 
+import { useWallet, defaultWalletHookData } from "../../../hooks/wallet";
+import { signIdentityMessage } from "../../../services/identity";
 import { useCreateIdentity } from "../useCreateIdentity";
 
 jest.mock("react-router-dom", () => ({
   useNavigate: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 
-jest.mock("@src/ui/services/identity", (): unknown => ({
+jest.mock("../ui/services/identity", (): unknown => ({
   signIdentityMessage: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/app", (): unknown => ({
+jest.mock("../ui/ducks/app", (): unknown => ({
   closePopup: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/identities", (): unknown => ({
+jest.mock("../ui/ducks/identities", (): unknown => ({
   createIdentity: jest.fn(),
 }));
 
-jest.mock("@src/ui/hooks/wallet", (): unknown => ({
+jest.mock("../ui/hooks/wallet", (): unknown => ({
   useWallet: jest.fn(),
 }));
 

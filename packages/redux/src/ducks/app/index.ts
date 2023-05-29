@@ -2,11 +2,12 @@
 import { RPCAction } from "@cryptkeeper/constants";
 import { postMessage } from "@cryptkeeper/controllers";
 import { createSlice } from "@reduxjs/toolkit";
-import { useAppSelector } from "@src/hooks";
 import deepEqual from "fast-deep-equal";
 
+import type { TypedThunk } from "../../store";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { TypedThunk } from "@src/store";
+
+import { useAppSelector } from "../../hooks";
 
 export interface AppState {
   isInitialized: boolean;

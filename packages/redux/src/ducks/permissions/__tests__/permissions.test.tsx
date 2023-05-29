@@ -3,11 +3,11 @@
  */
 import { RPCAction } from "@cryptkeeper/constants";
 import { postMessage } from "@cryptkeeper/controllers";
-import { store } from "@src/store";
 import { renderHook } from "@testing-library/react";
 import { Provider } from "react-redux";
 
 import { checkHostApproval, fetchHostPermissions, removeHost, setHostPermissions, useHostPermission } from "..";
+import { store } from "../../../store";
 
 // TODO: jest import issue
 jest.unmock("@src/hooks");

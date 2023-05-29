@@ -1,11 +1,12 @@
 import { Paths } from "@cryptkeeper/constants";
 import { setupPassword, useAppDispatch } from "@cryptkeeper/redux";
 import { PasswordFormFields } from "@cryptkeeper/types";
-import { useValidationResolver } from "@src/hooks/validation";
 import { BaseSyntheticEvent, useCallback, useState } from "react";
 import { useForm, UseFormRegister } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { object, ref, string } from "yup";
+
+import { useValidationResolver } from "../../hooks/validation";
 
 export interface IUseOnboardingData {
   isLoading: boolean;

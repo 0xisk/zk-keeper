@@ -2,19 +2,19 @@
  * @jest-environment jsdom
  */
 
-import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { render, waitFor } from "@testing-library/react";
 import { Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Settings from "..";
+import { useWallet, defaultWalletHookData } from "../../../hooks/wallet";
 import { IUseSettingsData, SettingsTabs, useSettings } from "../useSettings";
 
 jest.mock("react-router-dom", (): unknown => ({
   useNavigate: jest.fn(),
 }));
 
-jest.mock("@src/ui/hooks/wallet", (): unknown => ({
+jest.mock("../ui/hooks/wallet", (): unknown => ({
   useWallet: jest.fn(),
 }));
 

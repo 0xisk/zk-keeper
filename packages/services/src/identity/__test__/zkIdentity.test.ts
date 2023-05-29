@@ -2,11 +2,11 @@
 import { getEnabledFeatures } from "@cryptkeeper/config";
 import { pushMessage } from "@cryptkeeper/controllers";
 import { setSelectedCommitment } from "@cryptkeeper/redux";
-import { IdentityService } from "@src/identity";
-import { SimpleStorage } from "@src/storage";
 import { bigintToHex } from "bigint-conversion";
 import { browser } from "webextension-polyfill-ts";
 
+import { IdentityService } from "..";
+import { SimpleStorage } from "../../storage";
 import { createNewIdentity } from "../factory";
 
 const mockDefaultIdentityCommitment =
@@ -20,7 +20,7 @@ const mockAuthenticityCheckData = {
   isNewOnboarding: false,
 };
 
-jest.mock("@src/background/services/lock", (): unknown => ({
+jest.mock("../../lock", (): unknown => ({
   getInstance: jest.fn(() => ({
     encrypt: jest.fn(() => mockSerializedDefaultIdentities),
     decrypt: jest.fn((value) =>
@@ -32,32 +32,32 @@ jest.mock("@src/background/services/lock", (): unknown => ({
   })),
 }));
 
-jest.mock("@src/background/services/crypto", (): unknown => ({
+jest.mock("../../crypto", (): unknown => ({
   cryptoGenerateEncryptedHmac: jest.fn(() => "encrypted"),
   cryptoGetAuthenticBackupCiphertext: jest.fn(() => "encrypted"),
 }));
 
-jest.mock("@src/background/services/history", (): unknown => ({
+jest.mock("../../history", (): unknown => ({
   getInstance: jest.fn(() => ({
     trackOperation: jest.fn(),
   })),
 }));
 
-jest.mock("@src/background/services/notification", (): unknown => ({
+jest.mock("../../notification", (): unknown => ({
   getInstance: jest.fn(() => ({
     create: jest.fn(),
   })),
 }));
 
-jest.mock("@src/background/services/storage");
+jest.mock("../../storage");
 
-jest.mock("@src/util/pushMessage");
+jest.mock("../util/pushMessage");
 
 jest.mock("../factory");
 
 type MockStorage = { get: jest.Mock; set: jest.Mock; clear: jest.Mock };
 
-describe("background/services/zkIdentity", () => {
+describe("services/identity", () => {
   const identityService = IdentityService.getInstance();
 
   const defaultTabs = [{ id: 1 }, { id: 2 }];

@@ -14,16 +14,16 @@ import {
 import { IdentityData } from "@cryptkeeper/types";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTwitter, faGithub, faReddit } from "@fortawesome/free-brands-svg-icons";
-import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { act, render, screen, fireEvent } from "@testing-library/react";
 
 import { IdentityList } from "..";
+import { useWallet, defaultWalletHookData } from "../../../../../hooks/wallet";
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/identities", (): unknown => ({
+jest.mock("../ui/ducks/identities", (): unknown => ({
   deleteIdentity: jest.fn(),
   setActiveIdentity: jest.fn(),
   setIdentityName: jest.fn(),
@@ -32,7 +32,7 @@ jest.mock("@src/ui/ducks/identities", (): unknown => ({
   createIdentityRequest: jest.fn(),
 }));
 
-jest.mock("@src/ui/hooks/wallet", (): unknown => ({
+jest.mock("../ui/hooks/wallet", (): unknown => ({
   useWallet: jest.fn(),
 }));
 

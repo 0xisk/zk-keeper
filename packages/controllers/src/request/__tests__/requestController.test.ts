@@ -1,10 +1,10 @@
 import { setPendingRequests } from "@cryptkeeper/redux";
 import { PendingRequestType, RequestResolutionStatus } from "@cryptkeeper/types";
-import { BrowserController, pushMessage } from "@src/browser";
 
 import { RequestController } from "..";
+import { BrowserController, pushMessage } from "../../browser";
 
-jest.mock("@src/browser/BrowserController");
+jest.mock("../../browser/BrowserController");
 
 describe("controllers/requestManager", () => {
   let removeListeners: ((window?: number) => void)[] = [];

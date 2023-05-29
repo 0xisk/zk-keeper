@@ -1,16 +1,16 @@
 import { ISemaphoreGenerateArgs } from "@cryptkeeper/types";
-import { SemaphoreIdentity } from "@src/identity";
 
+import { SemaphoreIdentity } from "../../identity";
 import { ProofService } from "../ProofService";
 import { SemaphoreProofService } from "../protocols";
 
-jest.mock("@src/services/zkIdentity/protocols/SemaphoreIdentity", (): unknown => ({
+jest.mock("../../identity/protocols/SemaphoreIdentity", (): unknown => ({
   SemaphoreIdentity: {
     genFromSerialized: jest.fn(),
   },
 }));
 
-jest.mock("@src/services/zkProof/protocols/SemaphoreProof");
+jest.mock("../../proof/protocols/RLNProof");
 
 describe("services/zkProof", () => {
   describe("SemaphoreProof", () => {

@@ -1,6 +1,7 @@
 import { copyToClipboard, downloadFile } from "@cryptkeeper/controllers";
-import { useTimeout } from "@src/hooks/timeout";
 import { useCallback, useState } from "react";
+
+import { useTimeout } from "../../hooks/timeout";
 
 export interface IUseRevealMnemonicArgs {
   mnemonic: string;

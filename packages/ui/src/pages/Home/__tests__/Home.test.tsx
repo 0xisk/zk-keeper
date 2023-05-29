@@ -2,23 +2,23 @@
  * @jest-environment jsdom
  */
 
-import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { render, waitFor } from "@testing-library/react";
 import { Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Home from "..";
+import { useWallet, defaultWalletHookData } from "../../../hooks/wallet";
 import { IUseHomeData, useHome } from "../useHome";
 
 jest.mock("react-router-dom", () => ({
   useNavigate: jest.fn(),
 }));
 
-jest.mock("@src/ui/hooks/wallet", (): unknown => ({
+jest.mock("../ui/hooks/wallet", (): unknown => ({
   useWallet: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
   useAppSelector: jest.fn(),
 }));

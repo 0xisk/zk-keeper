@@ -1,10 +1,11 @@
 import { Chain } from "@cryptkeeper/config";
 import { DEFAULT_ROUND } from "@cryptkeeper/constants";
-import { ConnectionModal } from "@src/components/ConnectionModal";
-import { sliceAddress } from "@src/util/account";
+import { sliceAddress } from "@cryptkeeper/controllers";
 import BigNumber from "bignumber.js";
 import classNames from "classnames";
 import { useCallback, useEffect, useState } from "react";
+
+import { ConnectionModal } from "../../../../components/ConnectionModal";
 
 import "./infoStyles.scss";
 

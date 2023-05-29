@@ -1,5 +1,6 @@
 import { InitializationStep } from "@cryptkeeper/types";
-import { SimpleStorage } from "@src/storage";
+
+import { SimpleStorage } from "../storage";
 
 import { InitializationData, ExteranalWalletConnectionData } from "./types";
 

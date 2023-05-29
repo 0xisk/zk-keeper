@@ -1,7 +1,7 @@
 import { PendingRequest } from "@cryptkeeper/types";
-import { ButtonType, Button } from "@src/components/Button";
-import { FullModal, FullModalContent, FullModalFooter, FullModalHeader } from "@src/components/FullModal";
 
+import { ButtonType, Button } from "../../../Button";
+import { FullModal, FullModalContent, FullModalFooter, FullModalHeader } from "../../../FullModal";
 import "../../confirmModal.scss";
 
 export interface DefaultApprovalModalProps {

@@ -1,5 +1,6 @@
 import { RLNFullProof, RLNProofRequest, SemaphoreProof, SemaphoreProofRequest } from "@cryptkeeper/types";
-import { SemaphoreIdentity } from "@src/identity";
+
+import { SemaphoreIdentity } from "../identity";
 
 import { SemaphoreProofService, RLNProofService } from "./protocols";
 

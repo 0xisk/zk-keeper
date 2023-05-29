@@ -1,14 +1,15 @@
 import { Paths } from "@cryptkeeper/constants";
 import { redirectToNewTab } from "@cryptkeeper/controllers";
-import { Icon } from "@src/components/Icon";
-import { Menuable } from "@src/components/Menuable";
-import { useWallet } from "@src/hooks/wallet";
-import loaderSvg from "@src/static/icons/loader.svg";
-import logoSvg from "@src/static/icons/logo.svg";
 import classNames from "classnames";
 import { useCallback } from "react";
 import Jazzicon, { jsNumberForAddress } from "react-jazzicon";
 import { useNavigate } from "react-router-dom";
+
+import { useWallet } from "../../hooks/wallet";
+import { Icon } from "../Icon";
+import { Menuable } from "../Menuable";
+import loaderSvg from "../static/icons/loader.svg";
+import logoSvg from "../static/icons/logo.svg";
 
 import "./header.scss";
 

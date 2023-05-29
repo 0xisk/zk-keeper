@@ -23,7 +23,7 @@ jest.mock("react-router-dom", (): unknown => ({
   useNavigate: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/identities", (): unknown => ({
+jest.mock("../ui/ducks/identities", (): unknown => ({
   clearHistory: jest.fn(),
   fetchHistory: jest.fn(),
   enableHistory: jest.fn(),
@@ -31,7 +31,7 @@ jest.mock("@src/ui/ducks/identities", (): unknown => ({
   useHistorySettings: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 

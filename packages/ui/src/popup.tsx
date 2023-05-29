@@ -5,7 +5,6 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTwitter, faGithub, faReddit } from "@fortawesome/free-brands-svg-icons";
 import { ThemeProvider } from "@mui/material/styles";
 import { AnyAction } from "@reduxjs/toolkit";
-import Popup from "@src/pages/Popup";
 import { Web3ReactProvider } from "@web3-react/core";
 import log from "loglevel";
 import { Suspense } from "react";
@@ -14,6 +13,7 @@ import { Provider } from "react-redux";
 import { HashRouter } from "react-router-dom";
 import { browser } from "webextension-polyfill-ts";
 
+import Popup from "./pages/Popup";
 import { createMetamaskProvider } from "./services/provider";
 import { theme } from "./theme";
 

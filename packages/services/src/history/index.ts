@@ -1,10 +1,11 @@
 import { getEnabledFeatures } from "@cryptkeeper/config";
 import { HistorySettings, Operation, OperationType } from "@cryptkeeper/types";
-import { LockerService } from "@src/locker";
-import { NotificationService } from "@src/notification";
-import { SimpleStorage } from "@src/storage";
 import { nanoid } from "nanoid";
 import { browser } from "webextension-polyfill-ts";
+
+import { LockerService } from "../locker";
+import { NotificationService } from "../notification";
+import { SimpleStorage } from "../storage";
 
 import { ILoadOperationsData, OperationFilter, OperationOptions } from "./types";
 

@@ -1,12 +1,13 @@
+import { ellipsify } from "@cryptkeeper/controllers";
 import { IdentityMetadata, IdentityWeb2Provider } from "@cryptkeeper/types";
 import { IconName, IconPrefix } from "@fortawesome/fontawesome-common-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Icon } from "@src/components/Icon";
-import { Input } from "@src/components/Input";
-import { Menuable } from "@src/components/Menuable";
-import { ellipsify } from "@src/util/account";
 import classNames from "classnames";
 import { ChangeEvent, FormEvent, MouseEvent as ReactMouseEvent, useCallback, useState } from "react";
+
+import { Icon } from "../../../../../components/Icon";
+import { Input } from "../../../../../components/Input";
+import { Menuable } from "../../../../../components/Menuable";
 
 import "./identityListItemStyles.scss";
 

@@ -1,6 +1,7 @@
 {
   "name": "@cryptkeeper/types",
-  "private": "true",
+  "private": true,
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -21,6 +22,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@semaphore-protocol/proof": "^3.10.1",
-    "@zk-kit/incremental-merkle-tree": "^1.1.0"
+    "@zk-kit/incremental-merkle-tree": "^1.1.0",
+    "rlnjs": "^2.0.8"
   }
 }

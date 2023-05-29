@@ -1,7 +1,8 @@
 import { SemaphoreProof, SemaphoreProofRequest } from "@cryptkeeper/types";
 import { generateProof } from "@semaphore-protocol/proof";
-import { SemaphoreIdentity } from "@src/identity";
-import { getMerkleProof } from "@src/proof/utils";
+
+import { SemaphoreIdentity } from "../../identity";
+import { getMerkleProof } from "../utils";
 
 import { IProof } from "./types";
 

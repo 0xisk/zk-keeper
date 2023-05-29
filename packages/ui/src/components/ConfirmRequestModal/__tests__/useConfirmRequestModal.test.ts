@@ -8,12 +8,12 @@ import { act, renderHook, waitFor } from "@testing-library/react";
 
 import { IUseConfirmRequestModalData, useConfirmRequestModal } from "../useConfirmRequestModal";
 
-jest.mock("@src/ui/ducks/requests", (): unknown => ({
+jest.mock("../ui/ducks/requests", (): unknown => ({
   finalizeRequest: jest.fn(),
   usePendingRequests: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 

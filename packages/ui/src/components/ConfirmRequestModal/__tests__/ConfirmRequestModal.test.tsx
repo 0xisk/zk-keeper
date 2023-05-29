@@ -22,7 +22,7 @@ jest.mock("../useConfirmRequestModal", (): unknown => ({
   useConfirmRequestModal: jest.fn(),
 }));
 
-jest.mock("@src/components/ConnectionApprovalModal/useConnectionApprovalModal", (): unknown => ({
+jest.mock("../components/ConnectionApprovalModal/useConnectionApprovalModal", (): unknown => ({
   useConnectionApprovalModal: jest.fn(),
 }));
 

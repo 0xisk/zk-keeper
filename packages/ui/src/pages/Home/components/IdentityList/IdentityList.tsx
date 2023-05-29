@@ -6,16 +6,16 @@ import {
   setIdentityName,
   useSelectedIdentity,
 } from "@cryptkeeper/redux";
-import { Icon } from "@src/components/Icon";
-import { useWallet } from "@src/hooks/wallet";
 import classNames from "classnames";
 import { useCallback } from "react";
 
-import { IdentityItem } from "./Item";
-
 import type { IdentityData } from "@cryptkeeper/types";
 
+import { Icon } from "../../../../components/Icon";
+import { useWallet } from "../../../../hooks/wallet";
+
 import "./identityListStyles.scss";
+import { IdentityItem } from "./Item";
 
 export interface IdentityListProps {
   identities: IdentityData[];

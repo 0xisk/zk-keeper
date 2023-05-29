@@ -1,18 +1,18 @@
 import { IRlnGenerateArgs } from "@cryptkeeper/types";
-import { SemaphoreIdentity } from "@src/identity";
 
+import { SemaphoreIdentity } from "../../identity";
 import { ProofService } from "../ProofService";
 import { RLNProofService } from "../protocols";
 
-jest.mock("@src/background/services/zkIdentity/protocols/SemaphoreIdentity", (): unknown => ({
+jest.mock("../../identity/protocols/SemaphoreIdentity", (): unknown => ({
   SemaphoreIdentity: {
     genFromSerialized: jest.fn(),
   },
 }));
 
-jest.mock("@src/background/services/zkProof/protocols/RLNProof");
+jest.mock("../../proof/protocols/RLNProof");
 
-describe("background/services/zkProof", () => {
+describe("services/proof", () => {
   describe("RLNProof", () => {
     const defaultGenerateArgs: IRlnGenerateArgs = {
       identity: "identity",

@@ -1,7 +1,7 @@
-import { ConfirmDangerModal } from "@src/components/ConfirmDangerModal";
 import classNames from "classnames";
 import { ReactNode } from "react";
 
+import { ConfirmDangerModal } from "../ConfirmDangerModal";
 import { Icon } from "../Icon";
 
 import "./menuable.scss";

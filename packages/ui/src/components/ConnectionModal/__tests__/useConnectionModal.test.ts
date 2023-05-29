@@ -15,11 +15,11 @@ import { ChangeEvent } from "react";
 
 import { IUseConnectionModalArgs, IUseConnectionModalData, useConnectionModal } from "../useConnectionModal";
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/permissions", (): unknown => ({
+jest.mock("../ui/ducks/permissions", (): unknown => ({
   fetchHostPermissions: jest.fn(),
   setHostPermissions: jest.fn(),
   useHostPermission: jest.fn(),

@@ -1,6 +1,7 @@
 {
   "name": "@cryptkeeper/extension",
-  "private": "true",
+  "private": true,
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -26,6 +27,12 @@
     "@cryptkeeper/redux": "workspace:^1.0.0",
     "@cryptkeeper/services": "workspace:^1.0.0",
     "@cryptkeeper/types": "workspace:^1.0.0",
-    "@cryptkeeper/ui": "workspace:^1.0.0"
+    "@cryptkeeper/ui": "workspace:^1.0.0",
+    "loglevel": "^1.8.1",
+    "subworkers": "^1.0.1",
+    "webextension-polyfill-ts": "^0.26.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.236"
   }
 }

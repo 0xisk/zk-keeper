@@ -10,32 +10,32 @@ import {
   usePendingRequests,
   useAppDispatch,
 } from "@cryptkeeper/redux";
-import { useWallet, defaultWalletHookData } from "@src/hooks/wallet";
 import { renderHook, waitFor } from "@testing-library/react";
 import log from "loglevel";
 import { useNavigate } from "react-router-dom";
 
+import { useWallet, defaultWalletHookData } from "../../../hooks/wallet";
 import { IUsePopupData, usePopup } from "../usePopup";
 
 jest.mock("react-router-dom", (): unknown => ({
   useNavigate: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/app", (): unknown => ({
+jest.mock("../ui/ducks/app", (): unknown => ({
   fetchStatus: jest.fn(),
   useAppStatus: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/requests", (): unknown => ({
+jest.mock("../ui/ducks/requests", (): unknown => ({
   fetchPendingRequests: jest.fn(),
   usePendingRequests: jest.fn(),
 }));
 
-jest.mock("@src/ui/hooks/wallet", (): unknown => ({
+jest.mock("../ui/hooks/wallet", (): unknown => ({
   useWallet: jest.fn(),
 }));
 

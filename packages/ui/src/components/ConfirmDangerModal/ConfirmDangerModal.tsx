@@ -1,8 +1,9 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { ButtonType, Button } from "@src/components/Button";
-import { FullModalContent, FullModalFooter, FullModalHeader } from "@src/components/FullModal";
 import { MouseEvent as ReactMouseEvent } from "react";
+
+import { ButtonType, Button } from "../Button";
+import { FullModalContent, FullModalFooter, FullModalHeader } from "../FullModal";
 
 import { style } from "./style";
 

@@ -1,12 +1,12 @@
 import { type IBackupable, BackupService } from "..";
 
-jest.mock("@src/history", (): unknown => ({
+jest.mock("../../history", (): unknown => ({
   getInstance: jest.fn(() => ({
     trackOperation: jest.fn(),
   })),
 }));
 
-jest.mock("@src/notification", (): unknown => ({
+jest.mock("../../notification", (): unknown => ({
   getInstance: jest.fn(() => ({
     create: jest.fn(),
   })),

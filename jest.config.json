@@ -1,7 +1,5 @@
 {
-  "projects": [{
-
-  }],
+  "projects": [{}],
   "testTimeout": 10000,
   "transform": {
     "\\.(ts|tsx)": "ts-jest"

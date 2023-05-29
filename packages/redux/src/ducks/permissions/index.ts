@@ -2,10 +2,11 @@
 import { RPCAction } from "@cryptkeeper/constants";
 import { postMessage } from "@cryptkeeper/controllers";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { useAppSelector } from "@src/hooks";
 import deepEqual from "fast-deep-equal";
 
-import type { TypedThunk } from "@src/store";
+import type { TypedThunk } from "../../store";
+
+import { useAppSelector } from "../../hooks";
 
 export interface PermissionsState {
   noApprovals: Record<string, HostPermission>;

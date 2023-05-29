@@ -3,9 +3,10 @@ import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Typography from "@mui/material/Typography";
-import { Header } from "@src/components/Header";
-import { Icon } from "@src/components/Icon";
-import { PasswordInput } from "@src/components/PasswordInput";
+
+import { Header } from "../../components/Header";
+import { Icon } from "../../components/Icon";
+import { PasswordInput } from "../../components/PasswordInput";
 
 import { useDownloadBackup } from "./useDownloadBackup";
 

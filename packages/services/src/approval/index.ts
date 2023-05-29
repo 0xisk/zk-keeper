@@ -1,8 +1,8 @@
-import { cryptoGenerateEncryptedHmac, cryptoGetAuthenticBackupCiphertext } from "@src/crypto";
-import { LockerService } from "@src/locker";
-import { SimpleStorage } from "@src/storage";
+import type { IBackupable } from "../backup";
 
-import type { IBackupable } from "@src/backup";
+import { cryptoGenerateEncryptedHmac, cryptoGetAuthenticBackupCiphertext } from "../crypto";
+import { LockerService } from "../locker";
+import { SimpleStorage } from "../storage";
 
 const APPPROVALS_DB_KEY = "@APPROVED@";
 

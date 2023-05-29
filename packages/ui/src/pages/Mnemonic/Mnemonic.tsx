@@ -1,9 +1,10 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Icon } from "@src/components/Icon";
-import { RevealMnemonicInput } from "@src/components/RevealMnemonicInput";
-import logoSVG from "@src/static/icons/logo.svg";
+
+import { Icon } from "../../components/Icon";
+import { RevealMnemonicInput } from "../../components/RevealMnemonicInput";
+import logoSVG from "../static/icons/logo.svg";
 
 import { useMnemonic } from "./useMnemonic";
 

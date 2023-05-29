@@ -2,9 +2,10 @@ import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
-import { ConfirmDangerModal } from "@src/components/ConfirmDangerModal";
-import { Header } from "@src/components/Header";
-import { Icon } from "@src/components/Icon";
+
+import { ConfirmDangerModal } from "../../components/ConfirmDangerModal";
+import { Header } from "../../components/Header";
+import { Icon } from "../../components/Icon";
 
 import { General, Advanced } from "./components";
 import { SettingsTabs, useSettings } from "./useSettings";

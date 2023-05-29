@@ -16,10 +16,11 @@ module.exports = {
   ignorePatterns: [
     ".eslintrc.js",
     "commitlint.config.js",
-    "playwright.config.ts",
+    "./packages/e2e/playwright.config.ts",
     "webpack.*.js",
-    "demo/*.tsx",
-    "demo/*.ts",
+    "./packages/demo/*.tsx",
+    "./packages/demo/src/*.tsx",
+    "./packages/demo/src/*.ts",
   ],
   root: true,
   env: {

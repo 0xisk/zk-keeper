@@ -1,15 +1,15 @@
 import { Paths } from "@cryptkeeper/constants";
-import ConfirmRequestModal from "@src/components/ConfirmRequestModal";
-import CreateIdentity from "@src/pages/CreateIdentity";
-import DownloadBackup from "@src/pages/DownloadBackup";
-import Home from "@src/pages/Home";
-import Login from "@src/pages/Login";
-import Mnemonic from "@src/pages/Mnemonic";
-import Onboarding from "@src/pages/Onboarding";
-import Settings from "@src/pages/Settings";
 import { Navigate, RouteObject, useRoutes } from "react-router-dom";
 
+import ConfirmRequestModal from "../../components/ConfirmRequestModal";
 import "../../styles.scss";
+import CreateIdentity from "../CreateIdentity";
+import DownloadBackup from "../DownloadBackup";
+import Home from "../Home";
+import Login from "../Login";
+import Mnemonic from "../Mnemonic";
+import Onboarding from "../Onboarding";
+import Settings from "../Settings";
 
 import { usePopup } from "./usePopup";
 

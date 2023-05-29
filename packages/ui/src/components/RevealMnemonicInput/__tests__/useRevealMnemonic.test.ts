@@ -3,12 +3,12 @@
  */
 
 import { copyToClipboard, downloadFile } from "@cryptkeeper/controllers";
-import { IUseTimeoutData, useTimeout } from "@src/hooks/timeout";
 import { act, renderHook } from "@testing-library/react";
 
+import { IUseTimeoutData, useTimeout } from "../../../hooks/timeout";
 import { IUseRevealMnemonicArgs, useRevealMnemonic } from "../useRevealMnemonic";
 
-jest.mock("@src/ui/hooks/timeout", (): unknown => ({
+jest.mock("../ui/hooks/timeout", (): unknown => ({
   useTimeout: jest.fn(),
 }));
 

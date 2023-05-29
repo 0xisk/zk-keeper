@@ -1,11 +1,12 @@
+import { ellipsify } from "@cryptkeeper/controllers";
 import { IdentityWeb2Provider, Operation, OperationType } from "@cryptkeeper/types";
 import { IconName, IconPrefix } from "@fortawesome/fontawesome-common-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Icon } from "@src/components/Icon";
-import { Menuable } from "@src/components/Menuable";
-import { ellipsify } from "@src/util/account";
-import { formatDate } from "@src/util/date";
 import { useCallback } from "react";
+
+import { Icon } from "../../../../../components/Icon";
+import { Menuable } from "../../../../../components/Menuable";
+import { formatDate } from "../../../../../util/date";
 
 import "./activityListItemStyles.scss";
 

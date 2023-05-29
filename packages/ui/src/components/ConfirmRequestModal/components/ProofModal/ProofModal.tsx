@@ -1,9 +1,9 @@
 import { PendingRequest, ZKProofPayload } from "@cryptkeeper/types";
-import { ButtonType, Button } from "@src/components/Button";
-import { FullModal, FullModalContent, FullModalFooter, FullModalHeader } from "@src/components/FullModal";
-import { Icon } from "@src/components/Icon";
-import { Input } from "@src/components/Input";
 
+import { ButtonType, Button } from "../../../Button";
+import { FullModal, FullModalContent, FullModalFooter, FullModalHeader } from "../../../FullModal";
+import { Icon } from "../../../Icon";
+import { Input } from "../../../Input";
 import "../../confirmModal.scss";
 
 import { useProofModal } from "./useProofModal";

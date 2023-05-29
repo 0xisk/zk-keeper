@@ -1,6 +1,7 @@
 {
   "name": "@cryptkeeper/redux",
-  "private": "true",
+  "private": true,
+  "type": "module",
   "version": "1.0.0",
   "description": "Cryptkeeper private redux package.",
   "main": "dist/index.js",

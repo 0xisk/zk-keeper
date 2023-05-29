@@ -4,25 +4,25 @@
 
 import { Paths } from "@cryptkeeper/constants";
 import { saveMnemonic, useAppStatus, useAppDispatch } from "@cryptkeeper/redux";
-import { IUseTimeoutData, useTimeout } from "@src/hooks/timeout";
 import { act, renderHook, waitFor } from "@testing-library/react";
 import { useNavigate } from "react-router-dom";
 
+import { IUseTimeoutData, useTimeout } from "../../../hooks/timeout";
 import { useMnemonic } from "../useMnemonic";
 
 jest.mock("react-router-dom", () => ({
   useNavigate: jest.fn(),
 }));
 
-jest.mock("@src/ui/hooks/timeout", (): unknown => ({
+jest.mock("../ui/hooks/timeout", (): unknown => ({
   useTimeout: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/app", (): unknown => ({
+jest.mock("../ui/ducks/app", (): unknown => ({
   saveMnemonic: jest.fn(),
   useAppStatus: jest.fn(),
 }));

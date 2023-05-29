@@ -1,7 +1,7 @@
-import { ButtonType, Button } from "@src/components/Button";
-import { Checkbox } from "@src/components/Checkbox";
-import { FullModal, FullModalContent, FullModalFooter, FullModalHeader } from "@src/components/FullModal";
-import { Icon } from "@src/components/Icon";
+import { ButtonType, Button } from "../Button";
+import { Checkbox } from "../Checkbox";
+import { FullModal, FullModalContent, FullModalFooter, FullModalHeader } from "../FullModal";
+import { Icon } from "../Icon";
 
 import { useConnectionModal } from "./useConnectionModal";
 

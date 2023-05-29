@@ -1,5 +1,6 @@
 {
   "name": "@cryptkeeper/providers",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -25,6 +26,7 @@
     "@cryptkeeper/constants": "workspace:^1.0.0",
     "@cryptkeeper/services": "workspace:^1.0.0",
     "@cryptkeeper/types": "workspace:^1.0.0",
-    "@zk-kit/incremental-merkle-tree": "^1.1.0"
+    "@zk-kit/incremental-merkle-tree": "^1.1.0",
+    "loglevel": "^1.8.1"
   }
 }

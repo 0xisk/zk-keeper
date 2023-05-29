@@ -15,14 +15,14 @@ import { act, renderHook, waitFor } from "@testing-library/react";
 
 import { useActivityList } from "../useActivityList";
 
-jest.mock("@src/ui/ducks/identities", (): unknown => ({
+jest.mock("../ui/ducks/identities", (): unknown => ({
   deleteHistoryOperation: jest.fn(),
   fetchHistory: jest.fn(),
   useHistorySettings: jest.fn(),
   useIdentityOperations: jest.fn(),
 }));
 
-jest.mock("@src/ui/ducks/hooks", (): unknown => ({
+jest.mock("../ui/ducks/hooks", (): unknown => ({
   useAppDispatch: jest.fn(),
 }));
 

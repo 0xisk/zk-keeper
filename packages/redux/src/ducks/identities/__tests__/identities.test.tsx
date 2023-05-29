@@ -5,7 +5,6 @@
 import { RPCAction, ZERO_ADDRESS } from "@cryptkeeper/constants";
 import { postMessage } from "@cryptkeeper/controllers";
 import { HistorySettings, OperationType, SelectedIdentity } from "@cryptkeeper/types";
-import { store } from "@src/store";
 import { renderHook } from "@testing-library/react";
 import { Provider } from "react-redux";
 
@@ -34,6 +33,7 @@ import {
   setSettings,
   enableHistory,
 } from "..";
+import { store } from "../../../store";
 
 // TODO: solve jest import
 jest.unmock("@src/ui/ducks/hooks");
