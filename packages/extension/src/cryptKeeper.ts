@@ -1,5 +1,5 @@
 import { RPCAction } from "@cryptkeeper/constants";
-import { BrowserController, HandlerController, RequestController } from "@cryptkeeper/controllers";
+import { BrowserController, HandlerController } from "@cryptkeeper/controllers";
 import {
   ApprovalService,
   BackupService,
@@ -19,6 +19,8 @@ import {
 } from "@cryptkeeper/types";
 import log from "loglevel";
 import { browser } from "webextension-polyfill-ts";
+
+import { RequestController } from "./controllers/request"
 
 export default class CryptKeeperController extends HandlerController {
   private identityService: IdentityService;

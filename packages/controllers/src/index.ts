@@ -10,4 +10,3 @@ export {
   copyToClipboard,
 } from "./browser";
 export { HandlerController } from "./handler";
-export { RequestController } from "./request";

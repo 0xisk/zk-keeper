@@ -33,7 +33,6 @@
     "@cryptkeeper/controllers": "workspace:^1.0.0",
     "@cryptkeeper/redux": "workspace:^1.0.0",
     "@cryptkeeper/types": "workspace:^",
-    "@cryptkeeper/ui": "workspace:^1.0.0",
     "@semaphore-protocol/group": "^3.10.1",
     "@semaphore-protocol/identity": "^3.10.1",
     "@semaphore-protocol/proof": "^3.10.1",

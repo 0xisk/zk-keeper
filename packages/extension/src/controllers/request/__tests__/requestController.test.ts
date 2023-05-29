@@ -2,7 +2,7 @@ import { setPendingRequests } from "@cryptkeeper/redux";
 import { PendingRequestType, RequestResolutionStatus } from "@cryptkeeper/types";
 
 import { RequestController } from "..";
-import { BrowserController, pushMessage } from "../../browser";
+import { BrowserController, pushMessage } from "@cryptkeeper/controllers/src/browser";
 
 jest.mock("../../browser/BrowserController");
 
