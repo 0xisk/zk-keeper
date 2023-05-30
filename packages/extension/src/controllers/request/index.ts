@@ -1,4 +1,5 @@
 // TODO: Maybe it should move to @cryptkeeper/controllers but it will make a circular dependency issue so will leave it here for now.
+import { BrowserController, pushMessage } from "@cryptkeeper/controllers/src/browser";
 import { setPendingRequests } from "@cryptkeeper/redux";
 import {
   PendingRequest,
@@ -7,8 +8,6 @@ import {
   RequestResolutionStatus,
 } from "@cryptkeeper/types";
 import { EventEmitter2 } from "eventemitter2";
-
-import { BrowserController, pushMessage } from "@cryptkeeper/controllers/src/browser";
 
 export class RequestController extends EventEmitter2 {
   private browserService: BrowserController;

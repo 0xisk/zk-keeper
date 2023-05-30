@@ -4,7 +4,7 @@
   "transform": {
     "\\.(ts|tsx)": "ts-jest"
   },
-  "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"],
+  "setupFilesAfterEnv": ["<rootDir>/src/setupTest.ts"],
   "testMatch": ["**/src/**/__tests__/**/*.[jt]s?(x)", "**/src/**/?(*.)+(spec|test).[jt]s?(x)"],
   "moduleFileExtensions": ["ts", "js", "tsx"],
   "moduleNameMapper": {
@@ -17,14 +17,14 @@
     "/test/",
     "/__tests__/",
     "/e2e/",
-    "/src/server/",
-    "/src/ui/popup.tsx",
-    "/src/ui/theme.ts",
-    "/src/background/backgroundPage.ts",
-    "/src/background/appInit.ts"
+    "/packages/server/",
+    "/packages/demo/src/ui/popup.tsx",
+    "/packages/ui/src/theme.ts",
+    "/packages/extension/src/backgroundPage.ts",
+    "/packages/extension/src/appInit.ts"
   ],
   "coverageReporters": ["clover", "lcov", "json", "json-summary", "text", "text-summary"],
-  "collectCoverageFrom": ["packages/**/*.{ts,tsx}"],
+  "collectCoverageFrom": ["/packages/**/*.{ts,tsx}"],
   "coverageThreshold": {
     "global": {
       "statements": 80,

@@ -20,7 +20,7 @@ import {
 import log from "loglevel";
 import { browser } from "webextension-polyfill-ts";
 
-import { RequestController } from "./controllers/request"
+import { RequestController } from "./controllers/request";
 
 export default class CryptKeeperController extends HandlerController {
   private identityService: IdentityService;

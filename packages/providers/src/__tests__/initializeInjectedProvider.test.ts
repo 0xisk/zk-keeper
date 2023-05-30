@@ -4,16 +4,11 @@
 import { initializeInjectedProvider, setGlobalInjectedPrivider } from "../initializeInjectedProvider";
 import { CryptKeeperInjectedProvider } from "../sdk";
 
-jest.mock("@src/background/services/event", (): unknown => ({
-  __esModule: true,
-  default: jest.fn().mockImplementation(),
-}));
-
-jest.mock("@src/background/services/zkProof", (): unknown => ({
-  __esModule: true,
-  default: {
+jest.mock("@cryptkeeper/services", (): unknown => ({
+  EventEmitter: jest.fn().mockImplementation(),
+  ProofService: {
     getInstance: jest.fn(),
-  },
+  } 
 }));
 
 describe("InitialzieInjectedProvider", () => {
